@@ -14,7 +14,7 @@
                 "rewards": [
                     "0x49EFc549313Fd658c532Dda23C2b046Fe3329650"
                 ],
-                "totalReward": 10,
+                "totalReward": 1010,
                 "type": "multi"
             }
         }
@@ -31,7 +31,7 @@
     "web3": {
         "ethereumProvider": "https://eth-mainnet.gateway.pokt.network/v1/5f7cca33b90218002e9ce9be",
         "bscProvider": "https://bsc-dataseed.binance.org"
-        // "bscProvider": "https://bscnode.liquify.info"
+            // "bscProvider": "https://bscnode.liquify.info"
     },
     "api": {
         "graph": {
