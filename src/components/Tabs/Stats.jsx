@@ -27,7 +27,7 @@ const Stats = () => {
     <div className='stats grid-x grid-margin-x grid-margin-y'>
       <div className='medium-12 small-24 cell'>
         <GrayContainer
-          tootlipText='Total Rewards are the total $FUSE to be rewarded for the program duration.'
+          tootlipText='Total Rewards are the total $HI to be rewarded for the program duration.'
           title='Total Rewards'
           symbol={getRewardTokenName(networkId)}
           end={formatWeiToNumber(get(stakingContracts, [stakingContract, 'totalReward'], 0))}

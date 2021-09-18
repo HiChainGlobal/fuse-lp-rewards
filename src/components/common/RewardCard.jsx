@@ -109,7 +109,7 @@ export default ({
       </div>
       <div className='card-section'>
         <h1 className='card-section__label'>TOTAL REWARDS</h1>
-        <h1 className='card-section__info'>{totalRewardCounter} FUSE</h1>
+        <h1 className='card-section__info'>{totalRewardCounter} HI</h1>
       </div>
       {accountAddress && (
         <div className='card-section'>

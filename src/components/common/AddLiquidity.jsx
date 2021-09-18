@@ -24,7 +24,7 @@ const AddLiquidity = () => {
               <img src={alertIcon} />
               <div className='text'>
                 <div className='beta'>Beta - use at your own risk.</div>
-                Please add liquidity to the {swapName} {symbol} pool and deposit the LP token received here to mine more FUSE.
+                Please add liquidity to the {swapName} {symbol} pool and deposit the LP token received here to mine more HI.
                 <br />
                 <a
                   rel='noreferrer noopener'
