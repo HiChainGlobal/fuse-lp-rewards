@@ -64,7 +64,7 @@ const WithdrawForm = ({ handleConnect }) => {
           </div>
         </div>
         <PercentageSelector balance={totalStaked} />
-        <div className='gray_container__wrapper'>
+        <div className='gray_container__wrapper' style={{display:'flex',justifyContent: 'space-around'}}>
           <GrayContainer
             decimals={2}
             symbol={getRewardTokenName(networkId)}
@@ -76,7 +76,7 @@ const WithdrawForm = ({ handleConnect }) => {
               setFieldValue('submitType', 'withdrawInterest')
             }}
           />
-          <GrayContainer
+          {/* <GrayContainer
             decimals={2}
             symbol={getRewardTokenName(networkId)}
             tootlipText='Rewarded Hi already claimed.'
@@ -84,7 +84,7 @@ const WithdrawForm = ({ handleConnect }) => {
             end={isNaN(formatWeiToNumber(withdrawnToDate))
               ? 0
               : formatWeiToNumber(withdrawnToDate)}
-          />
+          /> */}
         </div>
         {
           accountAddress && isStakingNetwork && (
@@ -105,6 +105,7 @@ const WithdrawForm = ({ handleConnect }) => {
         {
           accountAddress && !isStakingNetwork && (
             <button
+            style={{background:'#30DFC4'}}
               onClick={() => switchNetwork(networkId)}
               className='button'
             >
@@ -115,6 +116,7 @@ const WithdrawForm = ({ handleConnect }) => {
         {
           !accountAddress && (
             <button
+            style={{background:'#30DFC4'}}
               onClick={(e) => {
                 e.preventDefault()
                 handleConnect()

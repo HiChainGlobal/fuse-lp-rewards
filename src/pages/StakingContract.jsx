@@ -59,7 +59,11 @@ export default ({ handleConnect }) => {
       {!isSwitchNetworkSupported && <SwitchNetwork networkId={networkId} />}
       <div className='main__wrapper'>
         <div className='main'>
-          <h1 className='title'>Add liquidity</h1>
+          <h1 className='title'>Stake Liquidity Provider Tokens</h1>
+          <div className='content'>
+            <p> Stake your LP tokens from providing liquidity in the HI/BUSD pair on Pancakeswap and be eligible for additional rewards from the bonus pool of 1 million HI. </p>
+            Liquidity Providers gain rewards based on their percentage share of the overall liquidity pool.
+          </div>
           <div className='boxs'>
             <InfoBox
               decimals={2}
@@ -75,7 +79,7 @@ export default ({ handleConnect }) => {
             <InfoBox
               name='deposits'
               symbol={symbol}
-              modalText='Your Deposits - Your deposits shows the total amount of HI you have deposited into the Staking Contract.'
+              modalText='Your Deposits - Your deposits shows the total amount of LP tokens you have deposited into the Staking Contract.'
               decimals={8}
               title='Your deposits'
               end={formatWeiToNumber(totalStaked)}

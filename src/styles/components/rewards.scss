@@ -1,356 +1,466 @@
 @include block(rewards) {
-  @include element(wrapper) {
-    background-color: #f4f6f9;
-  }
-  padding: 5em 0 0;
-  @include xy-grid-container(1200px);
-  @include xy-grid(vertical);
-  @include flex-align(null, top);
-  width: 100%;
-  @include element(headline) {
-    h1 {
-      font-weight: bold;
-      font-size: 1.875em;
-      line-height: 29px;
-      margin-bottom: 0.5em;
-      color: $color-black;
+    @include element(wrapper) {
+        background: linear-gradient(180deg, #FFFFFF -1.55%, rgba(237, 255, 252, 0.3) 11.93%, rgba(254, 250, 237, 0.3) 34.85%, rgba(233, 250, 255, 0.3) 60.67%, rgba(255, 239, 239, 0.3) 81.17%, rgba(253, 233, 255, 0.3) 100%);
     }
-
-    p {
-      max-width: 620px;
-      font-size: 1.125em;
-      line-height: 25px;
-      margin-bottom: 0.5em;
-    }
-  }
-  @include element(filter-chips) {
-    margin: 1.5em 0;
-    @include xy-grid(horizontal, false);
-    @include block(chip) {
-      &:nth-of-type(2) {
-        margin: 0 0.5em;
-      }
-      padding: 0 2em;
-      height: 48px;
-      color: #333333;
-      border: 2px solid #d9e1e7;
-      border-radius: 100px;
-      transition: 0.5s;
-      &:hover {
-        background: #283e52;
-        color: #fff;
-      }
-      &:disabled {
-        color: #fff;
-        background: #0f273c;
-        border: 2px solid #0f273c;
-      }
-    }
-  }
-  @include element(section) {
+    padding: 5em 0 0;
+    @include xy-grid-container(1200px);
+    @include xy-grid(vertical);
+    @include flex-align(null, top);
     width: 100%;
-    @include element(title) {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1em;
+    @include element(headline) {
+        h1 {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 80px;
+            line-height: 130%;
+            letter-spacing: 0.01em;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 29.727px 0px;
+            -webkit-text-fill-color: white;
+            -webkit-text-stroke-color: #000;
+            -webkit-text-stroke-width: 2px;
+        }
+        p {
+            width: 1198px;
+            height: 77.29px;
+            left: 0px;
+            top: 252.68px;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 60px;
+            line-height: 130%;
+            /* identical to box height, or 78px */
+            /* Brand/Black */
+            color: #000000;
+            /* Inside Auto Layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 29.727px 0px;
+        }
+        h3 {
+            width: 1198px;
+            height: 110.98px;
+            left: 0px;
+            top: 359.7px;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 150%;
+            color: #9E9E9E;
+            flex: none;
+            order: 2;
+            flex-grow: 0;
+            margin: 29.727px 0px;
+        }
     }
-    @include element(icon) {
-      width: 48px;
-      margin-right: 0.5em;
+    @include element(content) {
+        display: flex;
+        padding: 0 30px;
+        .img {
+            margin-right: 20px;
+        }
+        .content {
+            height: 456px;
+            h3 {
+                font-family: Inter;
+                font-style: normal;
+                font-size: 48px;
+                line-height: 150%;
+                color: #30DFC4;
+                margin-bottom: 32px;
+            }
+            div {
+                font-family: Inter;
+                font-style: normal;
+                font-size: 20px;
+                line-height: 150%;
+                color: #9E9E9E;
+            }
+            h4 {
+                margin-top: 80px;
+                box-sizing: border-box;
+                width: 493px;
+                height: 91px;
+                border-radius: 8px;
+                box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                // &:hover{}
+                p {
+                    position: relative;
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 30px;
+                    line-height: 150%;
+                    text-align: center;
+                    color: #000000;
+                    top: -70px;
+                }
+            }
+        }
     }
-    @include element(label) {
-      font-size: 1.875em;
-      font-weight: bold;
-      line-height: 21px;
-      color: $color-black;
-      margin-bottom: 0.5em;
+    @include element(img1) {
+        position: absolute;
+        top: 1600px;
+        right: 0;
+        width: 300px;
+        height: 280px;
     }
-  }
-  @include element(cards-container) {
-    width: 100%;
-    margin-bottom: 3em;
-  }
-  @include element(platforms) {
-    margin-bottom: 3em;
-  }
-  @include element(platform) {
-    background-color: white;
-    border-radius: 20px;
-    overflow: hidden;
-    @include breakpoint(medium up) {
-      min-width: 256px;
-      max-width: 256px;
-      &:not(:last-child) {
-        margin-right: 2em;
-      }
+    @include element(img2) {
+        position: absolute;
+        top: 1350px;
+        width: 300px;
+        height: 280px;
+        left: 0;
     }
-    @include breakpoint(medium down) {
-      &:not(:last-child) {
-        margin-bottom: 2em;
-      }
+    @include element(filter-chips) {
+        margin: 1.5em 0;
+        @include xy-grid(horizontal, false);
+        @include block(chip) {
+            &:nth-of-type(2) {
+                margin: 0 0.5em;
+            }
+            padding: 0 2em;
+            height: 48px;
+            color: #333333;
+            border: 2px solid #d9e1e7;
+            border-radius: 100px;
+            transition: 0.5s;
+            &:hover {
+                background: #0f273c;
+                color: #fff;
+            }
+            &:disabled {
+                color: #fff;
+                background: #0f273c;
+                border: 2px solid #0f273c;
+            }
+        }
     }
-
-    @include modifier(active) {
-      box-shadow: 0 0 0 4px #052235;
+    @include element(section) {
+        margin-bottom: 77px;
+        width: 100%;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        color: #30DFC4;
+        text-align: center;
     }
-
-    @include element(header) {
-      position: relative;
+    @include element(step) {
+        width: 100%;
+        .rewards__item {
+            display: flex;
+            margin-bottom: 83px;
+            .left {
+                width: 62px;
+                margin-right: 39px;
+            }
+            .right {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h3 {
+                    color: #000;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+            }
+        }
     }
-
-    @include element(footer) {
-      border: 1px solid #ebebeb;
-      padding: 32px 15px;
-      border-bottom-right-radius: 20px;
-      border-bottom-left-radius: 20px;
+    @include element(terms) {
+        width: 100%;
+        margin: 60px 0 113px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+        /* identical to box height, or 27px */
+        text-align: right;
+        text-decoration-line: underline;
+        /* Grey/400 */
+        color: #98A5AF;
     }
-
-    @include element(banner) {
-      width: 100%;
+    @include element(cards-container) {
+        height: 840px;
+        width: 100%;
+        margin-bottom: 3em;
+        display: flex;
+        justify-content: center;
     }
-
-    @include element(icon) {
-      position: absolute;
-      bottom: -25px;
-      right: 25px;
-      border-radius: 50%;
-      width: 64px;
-      height: 64px;
-
-      @include modifier(ring) {
-        border: 4px solid white;
-      }
+    @include element(platforms) {
+        margin-bottom: 3em;
     }
-  }
-
-  @include element(coming-soon) {
-    margin-top: 20px;
-    margin-bottom: 150px;
-    width: 100%;
-    text-align: center;
-
-    img {
-      width: 300px;
+    @include element(platform) {
+        background-color: white;
+        border-radius: 20px;
+        overflow: hidden;
+        @include breakpoint(medium up) {
+            min-width: 256px;
+            max-width: 256px;
+            &:not(:last-child) {
+                margin-right: 2em;
+            }
+        }
+        @include breakpoint(medium down) {
+            &:not(:last-child) {
+                margin-bottom: 2em;
+            }
+        }
+        @include modifier(active) {
+            box-shadow: 0 0 0 4px #052235;
+        }
+        @include element(header) {
+            position: relative;
+        }
+        @include element(footer) {
+            border: 1px solid #ebebeb;
+            padding: 32px 15px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        @include element(banner) {
+            width: 100%;
+        }
+        @include element(icon) {
+            position: absolute;
+            bottom: -25px;
+            right: 25px;
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            @include modifier(ring) {
+                border: 4px solid white;
+            }
+        }
     }
-  }
-
-  @include element(join-tg-link) {
-    font-size: 1.125em;
-    font-weight: bold;
-    color: #0377ff;
-    display: inline-block;
-    margin-bottom: 3em;
-
-    > img {
-      width: 40px;
+    @include element(coming-soon) {
+        margin-top: 20px;
+        margin-bottom: 150px;
+        width: 100%;
+        text-align: center;
+        img {
+            width: 300px;
+        }
     }
-  }
+    @include element(join-tg-link) {
+        font-size: 1.125em;
+        font-weight: bold;
+        color: #0377ff;
+        display: inline-block;
+        margin-bottom: 3em;
+        >img {
+            width: 40px;
+        }
+    }
 }
 
 @include block(reward-card) {
-  position: relative;
-  padding: 1em;
-  margin-bottom: 2em;
-  @include breakpoint(medium up) {
-    min-width: 256px;
-    max-width: 256px;
-    &:not(:last-child) {
-      margin-right: 2em;
-    }
-  }
-  @include breakpoint(medium down) {
-    &:not(:last-child) {
-      margin-bottom: 2em;
-    }
-  }
-
-  background-color: #fff;
-  border: 1px solid #e9e9e9;
-  border-radius: 10px;
-
-  @include modifier(uniswap) {
-    @include element(badge) {
-      background-color: $color-uniswap;
-      color: white;
-    }
-  }
-
-  @include modifier(fuseswap) {
-    @include element(badge) {
-      background-color: $color-fuseswap;
-      color: white;
-    }
-  }
-
-  @include modifier(pancakeswap) {
-    @include element(badge) {
-      background-color: $color-pancakeswap;
-      color: white;
-    }
-  }
-
-  @include element(header) {
-    @include xy-grid(horizontal, false);
-    @include flex-align(justify, middle);
-    height: 22px;
-  }
-
-  @include element(badge) {
-    display: flex;
-    font-size: 11px;
-    font-weight: bold;
-    padding: 4px 8px;
-    border-radius: 3px;
-    text-transform: uppercase;
-
-    > img {
-      width: 9px;
-      margin-right: 5px;
-    }
-
-    @include modifier(hide) {
-      visibility: hidden;
-    }
-  }
-
-  @include block(reward-status) {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-
-    @include modifier(new) {
-      background-color: #4ddd99;
-    }
-
-    @include modifier(expired) {
-      background-color: #f1653b;
-    }
-
-    @include modifier(soon) {
-      background-color: #ffe403;
-    }
-  }
-
-  @include element(icons) {
-    padding: 1em 0;
     position: relative;
-    @include xy-grid(horizontal, false);
-    @include flex-align(left, middle);
-
-    @include block(icon) {
-      width: 64px;
-      height: 24px;
-      background: #fef2ef;
-      border-radius: 8px;
-      @include flex-align(left, middle);
-      @include xy-grid();
-
-      > span {
-        font-weight: 500;
-        font-style: normal;
-        font-size: 12px;
-        line-height: 12px;
+    padding: 1em;
+    margin-bottom: 2em;
+    @include breakpoint(medium up) {
+        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+        background: #fff;
+        width: 460px;
+        height: 680px;
+        padding: 34px 31px;
+        &:not(:last-child) {
+            margin-right: 2em;
+        }
+    }
+    @include breakpoint(medium down) {
+        &:not(:last-child) {
+            margin-bottom: 2em;
+        }
+    }
+    background-color: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px;
+    @include modifier(uniswap) {
+        @include element(badge) {
+            background-color: $color-uniswap;
+            color: white;
+        }
+    }
+    @include modifier(fuseswap) {
+        @include element(badge) {
+            background-color: $color-fuseswap;
+            color: white;
+        }
+    }
+    @include modifier(pancakeswap) {
+        @include element(badge) {
+            background-color: $color-pancakeswap;
+            color: white;
+        }
+    }
+    @include element(header) {
+        @include xy-grid(horizontal, false);
+        @include flex-align(justify, middle);
+        height: 22px;
+    }
+    @include element(badge) {
+        display: flex;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 4px 8px;
+        border-radius: 3px;
         text-transform: uppercase;
-      }
-
-      @include modifier(new) {
-        background-color: #fef2ef;
-        > span {
-          color: #fc6e4c;
+        background: linear-gradient(113.96deg, #FFEEB8 6.41%, #FFFBED 49.79%, #8CFFF1 85.49%);
+        >img {
+            width: 9px;
+            margin-right: 5px;
         }
-      }
-
-      @include modifier(expired) {
-        background-color: #eef3f6;
-        > span {
-          color: #869aac;
+        @include modifier(hide) {
+            visibility: hidden;
+            color: #000;
         }
-      }
-
-      @include modifier(soon) {
-        background-color: #ebf8fc;
-        > span {
-          color: #80a8b4;
+    }
+    @include block(reward-status) {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        @include modifier(new) {
+            background-color: #4ddd99;
         }
-      }
+        @include modifier(expired) {
+            background-color: #f1653b;
+        }
+        @include modifier(soon) {
+            background-color: #ffe403;
+        }
     }
-  }
-
-  @include element(icon) {
-    height: 64px;
-    min-width: 112px;
-    max-width: 120px;
-  }
-
-  @include element(title) {
-    font-size: 17px;
-    font-weight: 500;
-    color: $color-black;
-  }
-
-  @include block(button) {
-    width: 100%;
-    height: 48px;
-    left: 16px;
-    top: 375px;
-    color: #fff;
-    background: #4c5f6e;
-    border-radius: 3px;
-    transition: 0.5s;
-    &:hover {
-      background: lighten(#4c5f6e, 10%);
+    @include element(icons) {
+        margin: 24px 0 42px;
+        padding: 1em 0;
+        position: relative;
+        @include xy-grid(horizontal, false);
+        @include flex-align(left, middle);
+        @include block(icon) {
+            width: 64px;
+            height: 24px;
+            background: #fef2ef;
+            border-radius: 8px;
+            @include flex-align(left, middle);
+            @include xy-grid();
+            >span {
+                font-weight: 500;
+                font-style: normal;
+                font-size: 12px;
+                line-height: 12px;
+                text-transform: uppercase;
+            }
+            @include modifier(new) {
+                background-color: #fef2ef;
+                >span {
+                    color: #fc6e4c;
+                }
+            }
+            @include modifier(expired) {
+                background-color: #eef3f6;
+                >span {
+                    color: #869aac;
+                }
+            }
+            @include modifier(soon) {
+                background-color: #ebf8fc;
+                >span {
+                    color: #80a8b4;
+                }
+            }
+        }
     }
-    &:disabled {
-      background-color: $color-disabled;
-      cursor: not-allowed;
-      color: $color-primary-dark;
+    @include element(icon) {
+        height: 64px;
+        min-width: 112px;
+        max-width: 120px;
     }
-
-    @include modifier(grey) {
-      background-color: #e9eDf2;
-      color: #052235;
-      &:hover {
-        background: darken(#e9eDf2, 5%);
-      }
+    @include element(title) {
+        margin-left: 10px;
+        font-size: 30px;
+        font-weight: 500;
+        color: $color-black;
     }
-  }
+    @include block(button) {
+        width: 100%;
+        height: 64px;
+        left: 16px;
+        top: 375px;
+        color: #fff;
+        background: #30DFC4;
+        border-radius: 3px;
+        transition: 0.5s;
+        font-size: 20px;
+        &:hover {
+            background: lighten(#30DFC4, 10%);
+        }
+        &:disabled {
+            background-color: $color-disabled;
+            cursor: not-allowed;
+            color: $color-primary-dark;
+        }
+        @include modifier(grey) {
+            background-color: #e9eDf2;
+            color: #052235;
+            &:hover {
+                background: darken(#e9eDf2, 5%);
+            }
+        }
+    }
 }
 
 @include block(card-section) {
-  margin: 1em 0 1.5em;
-  min-height: 36px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  font-weight: 500;
-  font-size: 12px;
-  @include element(label) {
-    font-size: 10px;
-    line-height: 12px;
-    text-transform: uppercase;
-    color: #9d9d9d;
-  }
-  @include element(info) {
-    font-size: 13px;
-    line-height: 16px;
+    padding: 0 1em;
+    margin: 1em 0 2em;
+    min-height: 36px;
     display: flex;
-    align-items: center;
-    color: #545454;
-  }
-  @include element(apy) {
-    font-size: 15px;
-    line-height: 16px;
-    color: #42b051;
-  }
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 12px;
+    @include element(label) {
+        font-size: 18px;
+        color: #98A5AF;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #9d9d9d;
+    }
+    @include element(info) {
+        font-size: 22px;
+        line-height: 150%;
+        display: flex;
+        align-items: center;
+        color: #263540;
+    }
+    @include element(apy) {
+        font-size: 15px;
+        line-height: 16px;
+        color: #42b051;
+    }
 }
 
 @include block(card-calender) {
-  @include element(label) {
-    display: flex;
-  }
-  @include element(icon) {
-    width: 12px;
-    margin-right: 0.2em;
-  }
+    @include element(label) {
+        display: flex;
+    }
+    @include element(icon) {
+        width: 12px;
+        margin-right: 0.2em;
+    }
+}
+
+.step {
+    color: red;
 }

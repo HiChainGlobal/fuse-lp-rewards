@@ -55,13 +55,8 @@ export const REWARDS_PLATFORMS_LIST = [{
         label: "PancakeSwap On BSC ",
         banner: pancakeSwapBanner,
         icon: bscIcon,
-    },
-    {
-        name: REWARDS_PLATFORMS.BALANCER,
-        label: "Coming soon!",
-        banner: comingSoonBanner,
-        icon: comingSoonIcon,
-    },
+    }
+
 ];
 
 export const STAKING_CONTRACTS = [{

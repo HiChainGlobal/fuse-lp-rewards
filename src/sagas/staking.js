@@ -160,6 +160,7 @@ function* getStatsData({ stakingContract, tokenAddress, networkId }) {
         const totalRewardsInUSD = weiToNumber(Number(stats.rewardsInfo[0].totalRewards), reward0Config.decimals) * rewardPrice
         apyPercent = calculateApy(totalRewardsInUSD, stats.globalTotalStakeUSD, reward0Config.duration)
     }
+    console.log('----', stats.rewardsInfo[0].totalRewards);
 
     yield put({
         type: actions.GET_STATS_DATA.SUCCESS,

@@ -12,6 +12,7 @@ import useEndDate from '@/hooks/useEndDate'
 import useCounter from '@/hooks/useCounter'
 import trophy from '@/assets/images/trophy.svg'
 import star from '@/assets/images/star.svg'
+import iconLogo from '@/assets/images/hi-select.svg'
 import useFormattedTimestamp from '@/hooks/useFormattedTimestamp'
 import { getContractRewardType , getPlatformPairName} from '@/utils'
 
@@ -75,10 +76,11 @@ export default ({
           'reward-card__badge--hide': isExpired
         }
         )}
+        style={{color:'#000'}}
         >
           {isComingSoon
-            ? <><img src={star} /> Coming Soon</>
-            : <><img src={trophy} /> APY : {apyPercentCounter}%</>}
+            ? <> Coming Soon</>
+            : <> APY : {apyPercentCounter}%</>}
         </div>
         <div className={classNames('reward-status', {
           'reward-status--soon': isComingSoon,
@@ -88,7 +90,7 @@ export default ({
         />
       </div>
       <div className='reward-card__icons'>
-        <img src={icon} className='reward-card__icon' />
+        <img src={iconLogo} className='reward-card__icon' />
         <h1 className='reward-card__title'>{pairName}</h1>
       </div>
       <div className='card-section'>

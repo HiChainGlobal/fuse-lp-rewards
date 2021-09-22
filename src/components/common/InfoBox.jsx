@@ -30,6 +30,7 @@ export default ({ Icon, name, title, end, withSymbol = true, modalText, symbol, 
           {modalText}
         </div>
         <button
+         style={{background:'#30DFC4'}}
           className='close'
           onClick={() => {
             setModalStatus(false)
@@ -91,7 +92,7 @@ export default ({ Icon, name, title, end, withSymbol = true, modalText, symbol, 
                 }
               </div>
             )
-            : <div className={classNames('info_box__value', { 'info_box__value--disabled': !accountAddress })}>{countUp} %</div>
+            : <div  className={classNames('info_box__value', { 'info_box__value--disabled': !accountAddress })}>{countUp} %</div>
         }
         <div className={classNames('info_box__title', { 'info_box__title--disabled': !accountAddress })}>{title}</div>
       </div>

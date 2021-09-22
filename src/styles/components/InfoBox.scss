@@ -1,82 +1,68 @@
 @include block(info_box) {
-  width: 160px;
-  height: 112px;
-  padding: 0.7em;
-  border-radius: 16px;
-  @include breakpoint(large up) {
-    @include xy-cell(30%, null, 0);
-  }
-
-  @include breakpoint(medium down) {
-    @include xy-cell(24, null, 0);
-    margin: 1em 0;
-  }
-
-  @include xy-grid(vertical);
-  @include flex-align(justify, null);
-
-  @include modifier(disabled) {
-    background: $color-disabled;
-  }
-
-  @include modifier(apy) {
-    background: #ebeef9;
-  }
-
-  @include modifier(deposits) {
-    background: #ebf8fc;
-
+    width: 160px;
+    height: 112px;
+    padding: 0.7em;
+    border-radius: 16px;
     @include breakpoint(large up) {
-      margin: 0 0.525rem;
+        @include xy-cell(30%, null, 0);
     }
-  }
-
-  @include modifier(rewards) {
-    background: #eafbec;
-  }
-
-  @include block(icons) {
-    @include xy-grid();
-    width: 100%;
-    @include flex-align(justify, middle);
-
-    @include block(item) {
-      cursor: pointer;
+    @include breakpoint(medium down) {
+        @include xy-cell(24, null, 0);
+        margin: 1em 0;
     }
-  }
-
-  @include element(value) {
-    display: flex;
-    flex-wrap: wrap;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 0.938em;
-    line-height: 16px;
-    color: $color-black;
-    margin-bottom: 0.3em;
-
-    > a {
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
+    @include xy-grid(vertical);
+    @include flex-align(justify, null);
     @include modifier(disabled) {
-      color: $color-dark-gray;
+        background: $color-disabled;
     }
-  }
-
-  @include element(title) {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 0.563em;
-    line-height: 12px;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-    color: #7e8ab4;
-
-    @include modifier(disabled) {
-      color: #b2bcc4;
+    @include modifier(apy) {
+        background: rgb(219, 225, 230)
     }
-  }
+    @include modifier(deposits) {
+        background: rgb(219, 225, 230);
+        @include breakpoint(large up) {
+            margin: 0 0.525rem;
+        }
+    }
+    @include modifier(rewards) {
+        background: rgb(219, 225, 230);
+    }
+    @include block(icons) {
+        @include xy-grid();
+        width: 100%;
+        @include flex-align(justify, middle);
+        @include block(item) {
+            cursor: pointer;
+        }
+    }
+    @include element(value) {
+        display: flex;
+        flex-wrap: wrap;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.938em;
+        line-height: 16px;
+        color: $color-black;
+        margin-bottom: 0.3em;
+        >a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        @include modifier(disabled) {
+            color: $color-dark-gray;
+        }
+    }
+    @include element(title) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.563em;
+        line-height: 12px;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        color: #7e8ab4;
+        @include modifier(disabled) {
+            color: #b2bcc4;
+        }
+    }
 }

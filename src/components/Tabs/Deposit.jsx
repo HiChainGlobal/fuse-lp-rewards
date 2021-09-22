@@ -108,6 +108,7 @@ const DepositForm = ({ handleConnect }) => {
         {
           showApprove && accountAddress && (
             <button
+            style={{background:'#30DFC4'}}
               onClick={() => {
                 setFieldValue('submitType', 'approve')
               }}
@@ -147,6 +148,7 @@ const DepositForm = ({ handleConnect }) => {
         {
           !accountAddress && (
             <button
+            style={{background:'#30DFC4'}}
               onClick={(e) => {
                 e.preventDefault()
                 handleConnect()

@@ -28,7 +28,7 @@ const PercentOption = ({ value, balance }) => {
               name='percent'
               value={value}
             />
-            <span className={classNames('text', { 'text--disabled': !accountAddress })}>{value} %</span>
+            <span style={{color:'#98A5AF'}} className={classNames('text', { 'text--disabled': !accountAddress })}>{value} %</span>
           </>
         )}
       </Field>

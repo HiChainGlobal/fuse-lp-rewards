@@ -7,7 +7,7 @@ import AddLiquidity from '@/components/common/AddLiquidity'
 import useOutsideClick from '@/hooks/useOutsideClick.jsx'
 import { addressShortener } from '@/utils/format'
 import walletIcon from '@/assets/images/wallet.svg'
-import fuseLogo from '@/assets/images/fuse_rewards.svg'
+import fuseLogo from '@/assets/images/hi-logo.svg'
 import explorerIcon from '@/assets/images/explorer.svg'
 import stakingIcon from '@/assets/images/staking-icon.svg'
 
@@ -47,7 +47,7 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
       <header className='header__wrapper'>
         <div className='header'>
           <div onClick={homePage} className='header__logo'>
-            <img alt='logo' src={fuseLogo} />
+            <img  style={{width: '60px'}} alt='logo' src={fuseLogo} />
           </div>
           <button ref={hamburgerRef} className='hamburger-button__container' onClick={() => setMenuOpen(!isOpen)}>
             <span className='hamburger-button__top' />
@@ -56,7 +56,7 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
           </button>
           <div className={classNames('header__nav', { header__nav__open: isOpen })}>
             <div className='header__link__wrapper'>
-              <a
+              {/* <a
                 rel='noreferrer noopener'
                 className={classNames('header__link', { 'header__link--dark': isOpen })}
                 target='_blank'
@@ -71,11 +71,12 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
                 href='https://explorer.fuse.io/'
               >
                 <img src={explorerIcon} />Explorer
-              </a>
+              </a> */}
               <a
                 rel='noreferrer noopener'
                 className={classNames('header__link', { 'header__link--dark': isOpen })}
-                target='_blank' href='https://medium.com/fusenet/how-to-stake-eth-fuse-lp-tokens-for-fuse-rewards-fd9abe08f84c'
+                target='_blank' href='https://resources.hi.com/new-liquidity-reward-program-on-pancakeswap'
+                style={{color:"#000"}}
               >
                 Guide
               </a>
