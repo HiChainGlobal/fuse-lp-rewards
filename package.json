@@ -1,6 +1,6 @@
 {
     "name": "hi-lp-rewards",
-    "version": "0.2",
+    "version": "0.2.0",
     "description": "",
     "keywords": [
         "dapp",
@@ -29,8 +29,7 @@
         "clean": "rm -rf ./dist",
         "build:dist": "cross-env NODE_ENV=production webpack -p",
         "start:dist": "cross-env NODE_ENV=production webpack-dev-server --hot && http-server ./dist -o",
-        "start": "webpack-dev-server --hot --mode development --open",
-        "eject": "react-scripts eject"
+        "start": "webpack-dev-server --hot --mode development --open --host 0.0.0.0"
     },
     "dependencies": {
         "@apollo/client": "^3.3.7",
