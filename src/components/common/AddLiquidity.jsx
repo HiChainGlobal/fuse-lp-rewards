@@ -23,13 +23,13 @@ const AddLiquidity = () => {
             <div className='content cell large-auto'>
               <img src={alertIcon} />
               <div className='text'>
-                <div className='beta'>Beta - use at your own risk.</div>
+                <div className='beta'   style={{color:'#333' }}>Beta - use at your own risk.</div>
                 Please add liquidity to the {swapName} {symbol} pool and deposit the LP token received here to mine more HI.
                 <br />
                 <a
                   rel='noreferrer noopener'
                   target='_blank'
-                  href={getAddLiquidityHelpLink(networkId, pairName)}
+                  href='https://resources.hi.com/new-liquidity-reward-program-on-pancakeswap'
                 >
                   Please refer to the guide for more details.
                 </a>
@@ -41,7 +41,7 @@ const AddLiquidity = () => {
               className='cell medium-6 small-24'
               href={(getAddLiquidityLink(pairs, networkId))}
             >
-              <button className='button'>
+              <button className='button'   style={{background:'#30DFC4' }}>
                 Add liquidity on {swapName}
               </button>
             </a>

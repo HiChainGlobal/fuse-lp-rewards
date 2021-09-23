@@ -19,7 +19,7 @@ const getPlatformBaseUrl = (networkId) => {
 }
 
 export const getAddLiquidityLink = (pairs, networkId) => {
-    return getPlatformBaseUrl(networkId) + '/#/add/' + getPairPath(pairs)
+    return 'https://pancakeswap.finance/add/' + getPairPath(pairs)
 }
 
 export const getPlatformName = (networkId) => {

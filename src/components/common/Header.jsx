@@ -89,7 +89,7 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
                     ref={dropdownRef}
                     onClick={() => setDropdownOpen(!isDropdownOpen)}
                   >
-                    <div className='header__wallet header__wallet--logged-in'>
+                    <div className='header__wallet header__wallet--logged-in' style={{background:'#30DFC4' }}>
                       <span className='dot' />
                       <span className='text'>{addressShortener(accountAddress)}</span>
                     </div>
@@ -112,9 +112,9 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
                   </div>
                   )
                 : (
-                  <div className='header__wallet header__wallet--logged-out' onClick={handleConnect}>
+                  <div className='header__wallet header__wallet--logged-out' onClick={handleConnect} style={{background:'#30DFC4' }}>
                     <img className='icon' src={walletIcon} />
-                    <span className='text'>Connect wallet</span>
+                    <span className='text' >Connect wallet</span>
                   </div>
                   )
             }

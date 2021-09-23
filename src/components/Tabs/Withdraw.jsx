@@ -51,7 +51,9 @@ const WithdrawForm = ({ handleConnect }) => {
     })
   }
   const renderForm = ({ values, setFieldValue, dirty, isValid }) => {
-    const { amount } = values
+    let { amount } = values
+    let decimalsLength = 0
+    amount && amount.split('.').length > 1 && (decimalsLength = amount.split('.')[1].length)
     return (
       <Form className='form form--withdraw'>
         <div className='input__wrapper'>
@@ -76,23 +78,15 @@ const WithdrawForm = ({ handleConnect }) => {
               setFieldValue('submitType', 'withdrawInterest')
             }}
           />
-          {/* <GrayContainer
-            decimals={2}
-            symbol={getRewardTokenName(networkId)}
-            tootlipText='Rewarded Hi already claimed.'
-            title='rewards claimed'
-            end={isNaN(formatWeiToNumber(withdrawnToDate))
-              ? 0
-              : formatWeiToNumber(withdrawnToDate)}
-          /> */}
         </div>
         {
           accountAddress && isStakingNetwork && (
             <button
+              style={{background:'#30DFC4' }}
               onClick={() => {
                 setFieldValue('submitType', 'withdrawStakeAndInterest')
               }}
-              disabled={!(isValid && dirty && amount)}
+              disabled={!(isValid && dirty && amount && decimalsLength <=18)}
               className='button'
             >
               Withdraw&nbsp;&nbsp;

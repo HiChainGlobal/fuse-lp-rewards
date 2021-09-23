@@ -153,7 +153,7 @@ export default () => {
                  STEP 2
               </h3>
               <div>
-                Stake your Liquidity Provider tokens with hi on this webpage.
+                Stake your Liquidity Provider tokens of HI/BUSD on this webpage.
               </div>
             </div>
           </div>

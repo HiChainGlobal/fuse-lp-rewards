@@ -124,6 +124,7 @@ const DepositForm = ({ handleConnect }) => {
         {
           accountAddress && isStakingNetwork && !isDepositBlacklisted && (
             <button
+            style={{background:'#30DFC4' }}
               onClick={() => {
                 setFieldValue('submitType', 'stake')
               }}
