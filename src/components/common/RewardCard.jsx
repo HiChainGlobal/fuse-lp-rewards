@@ -107,7 +107,7 @@ export default ({
       </div>
       <div className='card-section'>
         <h1 className='card-section__label'>Pool Size</h1>
-        <h1 className='card-section__info'>{reserve1Counter} {token1.symbol} / {reserve0Counter.length > 6 ? (<><br />{reserve0Counter}</>) : reserve0Counter} {token0.symbol}</h1>
+        <h1 className='card-section__info'>  { reserve0Counter} {token0.symbol} / {reserve1Counter > 6 ? (<> <br /> {reserve1Counter}</>): reserve1Counter } {token1.symbol}</h1>
       </div>
       <div className='card-section'>
         <h1 className='card-section__label'>TOTAL REWARDS</h1>

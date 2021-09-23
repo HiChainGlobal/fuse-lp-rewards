@@ -16,16 +16,16 @@
         background: $color-disabled;
     }
     @include modifier(apy) {
-        background: rgb(219, 225, 230)
+        background: #EEF3F6
     }
     @include modifier(deposits) {
-        background: rgb(219, 225, 230);
+        background: #EEF3F6;
         @include breakpoint(large up) {
             margin: 0 0.525rem;
         }
     }
     @include modifier(rewards) {
-        background: rgb(219, 225, 230);
+        background: #EEF3F6;
     }
     @include block(icons) {
         @include xy-grid();

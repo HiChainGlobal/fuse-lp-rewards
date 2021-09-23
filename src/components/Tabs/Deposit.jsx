@@ -66,9 +66,9 @@ const DepositForm = ({ handleConnect }) => {
   const renderForm = ({ values, setFieldValue }) => {
     let { amount } = values
     let  amountToStake = 0 
-     amount && !isNaN(Number(amount)) &&  (amountToStake = web3Utils.toWei(amount).toString())
-    
-   
+    let decimals  = 0
+    amount && amount.split('.').length > 1 && (decimals = amount.split('.')[1].length)
+    amount && !isNaN(Number(amount))&& decimals <=18 &&   (amountToStake = web3Utils.toWei(amount).toString())
     const showApprove = new BigNumber(amountApprove).isLessThan(amountToStake)
     const rewardsPerToken = rewardType === 'single' 
       ? calcRewardsPerToken(lockedRewards, globalTotalStake, amountToStake)
