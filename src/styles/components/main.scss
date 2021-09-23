@@ -52,7 +52,7 @@
     }
     @include element(list) {
         border-radius: 8px;
-        background: $color-disabled;
+        background: #D6F9F3;
         height: 56px;
         @include xy-grid();
         @include flex-align(justify, middle);
@@ -77,10 +77,10 @@
             }
         }
         @include modifier(disabled) {
-            background: #d9e1e7;
+            background: #30DFC4;
         }
         @include modifier(selected) {
-            background: $color-primary-dark;
+            background: #30DFC4;
             >h1 {
                 color: $color-white;
             }
@@ -260,7 +260,7 @@
         }
     }
     @include block(tooltip) {
-        background: $color-primary-dark;
+        background: #C4C4C4;
         border: 1px solid transparent;
         border-radius: 5px;
         max-width: 300px;
@@ -269,7 +269,7 @@
         font-weight: normal;
         font-size: 0.813em;
         line-height: 21px;
-        color: $color-white;
+        color: #000;
     }
     @include block(title) {
         font-style: normal;
@@ -294,17 +294,23 @@
         }
     }
     @include block(withdraw_stake) {
-        width: 103px;
-        background: #ffffff;
-        border: 2px solid #333;
-        box-sizing: border-box;
-        border-radius: 100px;
-        text-align: center;
-        padding: 0.2em;
-        font-style: normal;
+        // width: 103px;
+        // background: #ffffff;
+        // border: 3px solid #222;
+        // box-sizing: border-box;
+        // border-radius: 100px;
+        // text-align: center;
+        // padding: 0.2em;
+        // font-style: normal;
+        // font-weight: 500;
+        // font-size: 0.75em;
+        // line-height: 11px;
         font-weight: 500;
-        font-size: 0.75em;
-        line-height: 11px;
-        color: #333;
+        color: #222;
+        box-shadow: 2px 2px 4px rgba(66, 48, 48, 0.26);
+        width: 134px;
+        height: 36px;
+        background: linear-gradient(113.96deg, #FFEEB8 6.41%, #FFFBED 49.79%, #8CFFF1 85.49%);
+        border-radius: 7.28479px;
     }
 }

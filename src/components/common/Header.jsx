@@ -47,7 +47,7 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
       <header className='header__wrapper'>
         <div className='header'>
           <div onClick={homePage} className='header__logo'>
-            <img  style={{width: '60px'}} alt='logo' src={fuseLogo} />
+            <img  style={{width: '120px'}} alt='logo' src={fuseLogo} />
           </div>
           <button ref={hamburgerRef} className='hamburger-button__container' onClick={() => setMenuOpen(!isOpen)}>
             <span className='hamburger-button__top' />

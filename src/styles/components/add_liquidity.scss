@@ -1,74 +1,63 @@
 @include block(add_liquidity) {
-  background: #f6c444;
-  padding: 0.5em;
-
-  @include breakpoint(medium down) {
-    height: unset;
-  }
-
-  @include element(container) {
-    @include xy-grid-container();
-    @include xy-grid();
-    @include flex-align(null, middle);
-    height: 100%;
-
-    > div {
-      width: 100%;
-    }
-
-    @include breakpoint(small down) {
-      padding-top: 1em;
-      padding-bottom: 1em;
-    }
-  }
-
-  @include block(content) {
-    @include xy-grid(horizontal, false);
-    @include flex-align(null, middle);
-
+    background: linear-gradient(90deg, #FFEFB6 0%, #FFF8E2 33.85%, #C6EFED 69.1%, #30DFC4 100%);
+    padding: 0.5em;
     @include breakpoint(medium down) {
-      @include xy-grid(vertical, false);
-      @include flex-align(justify, top);
+        height: unset;
     }
-  }
-
-  @include block(text) {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.875em;
-    line-height: 18px;
-    color: $color-black;
-    margin-left: 1em;
-
-    > a {
-      &:hover {
-        text-decoration: underline;
-      }
+    @include element(container) {
+        @include xy-grid-container();
+        @include xy-grid();
+        @include flex-align(null, middle);
+        height: 100%;
+        >div {
+            width: 100%;
+        }
+        @include breakpoint(small down) {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
     }
-
-    @include breakpoint(medium down) {
-      margin: 0.5em 0;
+    @include block(content) {
+        @include xy-grid(horizontal, false);
+        @include flex-align(null, middle);
+        @include breakpoint(medium down) {
+            @include xy-grid(vertical, false);
+            @include flex-align(justify, top);
+        }
     }
-  }
-
-  @include block(beta) {
-    font-weight: 500;
-    font-size: 1.3em;
-    color: $color-primary-dark;
-    margin-bottom: 0.25em;
-  }
-
-  @include block(button) {
-    width: 254px;
-    height: 40px;
-    background: $color-primary-dark;
-    border-radius: 100px;
-    color: $color-white;
-    font-weight: 500;
-    font-size: 0.938em;
-    line-height: 14px;
-    &:hover {
-      background: $color-light-dark;
+    @include block(text) {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.875em;
+        line-height: 18px;
+        color: $color-black;
+        margin-left: 1em;
+        >a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        @include breakpoint(medium down) {
+            margin: 0.5em 0;
+        }
     }
-  }
+    @include block(beta) {
+        font-weight: 500;
+        font-size: 1.3em;
+        color: $color-primary-dark;
+        margin-bottom: 0.25em;
+    }
+    @include block(button) {
+        width: 254px;
+        height: 40px;
+        background: $color-primary-dark;
+        border-radius: 100px;
+        color: $color-white;
+        font-weight: 500;
+        font-size: 0.938em;
+        line-height: 14px;
+        &:hover {
+            background: $color-light-dark;
+        }
+    }
 }

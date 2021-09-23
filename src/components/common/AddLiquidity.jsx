@@ -41,7 +41,7 @@ const AddLiquidity = () => {
               className='cell medium-6 small-24'
               href={(getAddLiquidityLink(pairs, networkId))}
             >
-              <button className='button'   style={{background:'#30DFC4' }}>
+              <button className='button'   style={{background:'#002855' }}>
                 Add liquidity on {swapName}
               </button>
             </a>
