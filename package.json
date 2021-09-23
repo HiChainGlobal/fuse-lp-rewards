@@ -1,6 +1,6 @@
 {
     "name": "hi-lp-rewards",
-    "version": "0.1.1",
+    "version": "0.2",
     "description": "",
     "keywords": [
         "dapp",
@@ -27,9 +27,10 @@
         "lint": "standard",
         "lint-fix": "standard --fix",
         "clean": "rm -rf ./dist",
-        "build:dist": "npm run clean && cross-env NODE_ENV=production webpack -p",
-        "start:dist": "npm run clean && cross-env NODE_ENV=production webpack-dev-server --hot && http-server ./dist -o",
-        "start": "npm run clean && webpack-dev-server --hot --mode development --open"
+        "build:dist": "cross-env NODE_ENV=production webpack -p",
+        "start:dist": "cross-env NODE_ENV=production webpack-dev-server --hot && http-server ./dist -o",
+        "start": "webpack-dev-server --hot --mode development --open",
+        "eject": "react-scripts eject"
     },
     "dependencies": {
         "@apollo/client": "^3.3.7",

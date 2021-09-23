@@ -296,7 +296,7 @@
     @include block(withdraw_stake) {
         width: 103px;
         background: #ffffff;
-        border: 2px solid $color-primary-dark;
+        border: 2px solid #333;
         box-sizing: border-box;
         border-radius: 100px;
         text-align: center;
@@ -305,6 +305,6 @@
         font-weight: 500;
         font-size: 0.75em;
         line-height: 11px;
-        color: $color-primary-dark;
+        color: #333;
     }
 }
