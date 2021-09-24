@@ -152,13 +152,17 @@ function* getStatsData({ stakingContract, tokenAddress, networkId }) {
     if (apyPercent == 0 && reward0 && reward0Config) {
 
         let rewardPrice = 0;
+        let globalTotalStakeUSD = 0;
         if (reward0.toLowerCase() == stats.token0.id.toLowerCase()) {
             rewardPrice = stats.reserve0 != 0 ? Number(stats.reserve1) / Number(stats.reserve0) : 0;
-        } else if (reward0 == stats.token1.id) {
+            globalTotalStakeUSD = Number(stats.reserve1) * 2; // the token1 is USD stable coin
+        } else if (reward0.toLowerCase() == stats.token1.id.toLowerCase()) {
             rewardPrice = stats.reserve1 != 0 ? Number(stats.reserve0) / Number(stats.reserve1) : 0;
+            globalTotalStakeUSD = Number(stats.reserve0) * 2; // the token0 is USD stable coin
         }
+
         const totalRewardsInUSD = weiToNumber(Number(stats.rewardsInfo[0].totalRewards), reward0Config.decimals) * rewardPrice
-        apyPercent = calculateApy(totalRewardsInUSD, stats.globalTotalStakeUSD, reward0Config.duration)
+        apyPercent = calculateApy(totalRewardsInUSD, globalTotalStakeUSD, reward0Config.duration)
     }
     yield put({
         type: actions.GET_STATS_DATA.SUCCESS,
