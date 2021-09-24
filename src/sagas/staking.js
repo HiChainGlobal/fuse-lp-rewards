@@ -149,16 +149,18 @@ function* getStatsData({ stakingContract, tokenAddress, networkId }) {
     const reward0 = rewards[0];
     let apyPercent = stats.rewardsInfo[0].apyPercent;
     const reward0Config = CONFIG.apyPercentCalculation[reward0]
-    if (apyPercent == 0 && reward0 && reward0Config) {
+    if (!apyPercent && reward0 && reward0Config) {
 
         let rewardPrice = 0;
         let globalTotalStakeUSD = 0;
+        const reserve0 = Number(stats.reserve0);
+        const reserve1 = Number(stats.reserve1);
         if (reward0.toLowerCase() == stats.token0.id.toLowerCase()) {
-            rewardPrice = stats.reserve0 != 0 ? Number(stats.reserve1) / Number(stats.reserve0) : 0;
-            globalTotalStakeUSD = Number(stats.reserve1) * 2; // the token1 is USD stable coin
+            rewardPrice = reserve0 ? reserve1 / reserve0 : 0;
+            globalTotalStakeUSD = weiToNumber(reserve1 * 2, reward0Config.decimals); // the token1 is USD stable coin
         } else if (reward0.toLowerCase() == stats.token1.id.toLowerCase()) {
-            rewardPrice = stats.reserve1 != 0 ? Number(stats.reserve0) / Number(stats.reserve1) : 0;
-            globalTotalStakeUSD = Number(stats.reserve0) * 2; // the token0 is USD stable coin
+            rewardPrice = reserve1 ? reserve0 / reserve1 : 0;
+            globalTotalStakeUSD = weiToNumber(reserve0 * 2, reward0Config.decimals); // the token0 is USD stable coin
         }
 
         const totalRewardsInUSD = weiToNumber(Number(stats.rewardsInfo[0].totalRewards), reward0Config.decimals) * rewardPrice
