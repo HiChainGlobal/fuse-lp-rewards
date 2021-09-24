@@ -54,6 +54,7 @@ export default ({ handleConnect }) => {
     // get contract stats
     dispatch(getStatsData(stakingContract, lpToken, networkId))
   }, isRunning ? 5000 : null)
+  
   return (
     <>
       {!isSwitchNetworkSupported && <SwitchNetwork networkId={networkId} />}

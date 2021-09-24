@@ -68,7 +68,7 @@ export default ({
   }
 
   return (
-    <div className={classNames('reward-card cell medium-10 small-24', className)}>
+    <div className={classNames('reward-card cell', className)}>
       <div className='reward-card__header'>
         <div className={classNames('reward-card__badge', {
           'reward-card__badge--hide': isExpired

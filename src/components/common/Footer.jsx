@@ -34,17 +34,15 @@ const HoverIcon = ({ Icon, Hover, link }) => {
 
 const Footer = () => {
   return (
-    <footer className='footer__wrapper grid-y align-center align-top' style={{ padding: '20px 40px'}}>
+    <footer className='footer__wrapper grid-y align-center align-top'>
       <div className='footer cell medium-12 grid-x align-middle'>
         <div className='grid-x align-middle align-center' style={{color:'#fff'}}>
           ©2021 hi Foundation Ltd. 
         </div>
         <div className='footer__text grid-x align-start'>
-        Crypto services provided by: hi Technologies Limited OÜ - Tallinn, Estonia (Reg: 14914790) License: PVT000505
+             Crypto services provided by: hi Technologies Limited OÜ - Tallinn, Estonia (Reg: 14914790) License: PVT000505
         </div>
         <div className='footer__icons grid-x align-center'>
-
-
         <HoverIcon
             link='https://t.me/hi_official'
             Icon={() => (
