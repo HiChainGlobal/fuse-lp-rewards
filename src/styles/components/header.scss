@@ -28,6 +28,53 @@
             box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2);
         }
     }
+    @include element(lang) {
+        display: flex;
+        margin-right: 16px;
+        cursor: pointer;
+        img {
+            width: 30px;
+            height: 30px;
+            margin-right: 2px;
+        }
+        span {
+            font-size: 20px;
+            display: inline-block;
+            line-height: 30px;
+        }
+    }
+    @include element(right) {
+        transform-origin: top right
+    }
+    @include element(lang-tags) {
+        position: absolute;
+        padding: 20px;
+        top: 64px;
+        right: 260px;
+        background-color: white;
+        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+        transform: scale(0);
+        transition: transform .2s;
+        a {
+            display: block;
+            height: 36px;
+            line-height: 36px;
+            white-space: nowrap;
+            color: #757575;
+            font-size: 18px;
+            width: 120px;
+        }
+        .active {
+            color: #30DFC4;
+            font-weight: 500;
+        }
+        a:hover {
+            color: #30DFC4;
+        }
+    }
+    @include element(show) {
+        transform: scale(1)
+    }
     @include element(link) {
         text-decoration: none;
         font-size: 0.938em;

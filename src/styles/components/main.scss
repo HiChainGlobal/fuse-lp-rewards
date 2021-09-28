@@ -260,7 +260,7 @@
         }
     }
     @include block(tooltip) {
-        background: #C4C4C4;
+        background: rgba(255, 252, 242, .6);
         border: 1px solid transparent;
         border-radius: 5px;
         max-width: 300px;
