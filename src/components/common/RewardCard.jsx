@@ -13,7 +13,7 @@ import useCounter from '@/hooks/useCounter'
 import iconLogo from '@/assets/images/hi-select.svg'
 import useFormattedTimestamp from '@/hooks/useFormattedTimestamp'
 import { getContractRewardType , getPlatformPairName} from '@/utils'
-
+import { useTranslation } from "react-i18next";
 export default ({
   className,
   icon,
@@ -26,6 +26,7 @@ export default ({
   uniPairToken,
   btnText = 'Select'
 }) => {
+  let { t } = useTranslation();
   const dispatch = useDispatch()
   const { accountAddress } = useSelector(state => state.network)
   const stakingContracts = useSelector(state => state.entities.stakingContracts)
@@ -77,8 +78,8 @@ export default ({
         style={{color:'#000'}}
         >
           {isComingSoon
-            ? <> Coming Soon</>
-            : <> APY : {apyPercentCounter}%</>}
+            ? <> {t('chooseStakingContract.ComingSoon')}</>
+            : <> {t('liquidity_Page_title_2_content_6')} : {apyPercentCounter}%</>}
         </div>
         <div className={classNames('reward-status', {
           'reward-status--soon': isComingSoon,
@@ -89,13 +90,14 @@ export default ({
       </div>
       <div className='reward-card__icons'>
         <img src={iconLogo} className='reward-card__icon' />
-        <h1 className='reward-card__title'>{pairName}</h1>
+        {/* <h1 className='reward-card__title'>{pairName}</h1> */}
+        <h1 className='reward-card__title'>{t('liquidity_Page__title_2')}</h1>
       </div>
       <div className='card-section'>
         <div className='card-calender__label'>
           <h1 className='card-section__label'>
             {!isMulti && isComingSoon && 'Starts at'}
-            {isNew && 'Expires at'}
+            {isNew && t('liquidity_Page_title_2_content_1')}
             {!isMulti && isExpired && 'Expired at'}
           </h1>
         </div>
@@ -104,16 +106,16 @@ export default ({
         {!isMulti && isExpired && formattedDateEnd && <div className='card-section__info'>{formattedDateEnd}</div>}
       </div>
       <div className='card-section'>
-        <h1 className='card-section__label'>Pool Size</h1>
+        <h1 className='card-section__label'>{t('liquidity_Page_title_2_content_3')}</h1>
         <h1 className='card-section__info'>  { reserve0Counter} {token0.symbol} / {reserve1Counter > 6 ? (<> <br /> {reserve1Counter}</>): reserve1Counter } {token1.symbol}</h1>
       </div>
       <div className='card-section'>
-        <h1 className='card-section__label'>TOTAL REWARDS</h1>
+        <h1 className='card-section__label'>{t('liquidity_Page_title_2_content_5')}</h1>
         <h1 className='card-section__info'>{totalRewardCounter} HI</h1>
       </div>
       {accountAddress && (
         <div className='card-section'>
-          <h1 className='card-section__label'>Staked Amount</h1>
+          <h1 className='card-section__label'>{t('liquidity_Page_title_2_content_8')}</h1>
           <h1 className='card-section__info'>{totalStakedCounter} {symbol}</h1>
         </div>
       )}
@@ -122,7 +124,7 @@ export default ({
         disabled={isComingSoon}
         onClick={handleClick}
       >
-        Select
+        {t('liquidity_Page_title_2_button')}
       </button>
     </div>
   )

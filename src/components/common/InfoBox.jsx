@@ -8,8 +8,9 @@ import ReactModal from 'react-modal'
 import { useModal } from 'react-modal-hook'
 import { formatNumber } from '@/utils/format'
 import InfoIconModal from '@/assets/images/info-icon-modal.svg'
-
+import { useTranslation } from "react-i18next";
 export default ({ Icon, name, title, end, withSymbol = true, modalText, symbol, link, decimals, format = true }) => {
+  let { t } = useTranslation();
   const { accountAddress } = useSelector(state => state.network)
   const [isHover, setHover] = useState(false)
   const [modalStatus, setModalStatus] = useState(false)
@@ -20,11 +21,12 @@ export default ({ Icon, name, title, end, withSymbol = true, modalText, symbol, 
   })
 
   const [showModal] = useModal(() => (
+    
     <ReactModal isOpen={modalStatus} overlayClassName='modal__overlay' className='modal__content'>
       <div className='info-modal'>
         <div className='image'><img src={InfoIconModal} /></div>
         <div className='title'>
-          What does “{title}” mean?
+         {t('liquidity_page_title_5_title_1')}“{title}”{t('liquidity_page_title_5_title_2')}
         </div>
         <div className='text'>
           {modalText}
@@ -36,7 +38,7 @@ export default ({ Icon, name, title, end, withSymbol = true, modalText, symbol, 
             setModalStatus(false)
           }}
         >
-          Close
+          {t('liquidity_page_title_5_button_1')}
         </button>
       </div>
     </ReactModal>

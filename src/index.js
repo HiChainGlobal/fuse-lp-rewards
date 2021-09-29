@@ -5,7 +5,7 @@ import { render } from 'react-dom'
 
 import App from './App'
 import './styles/styles.scss'
-
+import "./i18n.js";
 if (typeof CONFIG?.reactGA?.trackingId === 'string') {
   ReactGA.initialize(CONFIG?.reactGA?.trackingId, CONFIG.reactGA.gaOptions)
   ReactGA.set({

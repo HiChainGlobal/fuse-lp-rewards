@@ -3,18 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import map from "lodash/map";
 import isEmpty from "lodash/isEmpty";
 import reverse from "lodash/reverse";
-import classNames from "classnames";
 import RewardCard from "@/components/common/RewardCard";
-import Step from "@/components/common/Step";
 import comingSoon from "@/assets/images/coming-soon.png";
-import telegram from "@/assets/images/telegram-app.svg";
 import { selectStakingPlatform } from "@/actions/staking";
 import {
   PAIRS_ICONS,
   STAKING_CONTRACTS,
-  REWARDS_PLATFORMS_LIST,
-  REWARDS_PLATFORMS,
 } from "@/constants";
+import { useTranslation } from "react-i18next";
 import scheduleLogo from "@/assets/images/hi-schedule.svg";
 import btn from "@/assets/images/hi-btn.svg";
 import step1 from "@/assets/images/hi-step1.svg";
@@ -23,7 +19,9 @@ import step3 from "@/assets/images/hi-step3.svg";
 import step4 from "@/assets/images/hi-step4.svg";
 import backR from "@/assets/images/hi-back-r.svg";
 import back from "@/assets/images/hi-back.svg";
+
 export default () => {
+  let { t } = useTranslation();
   const disptach = useDispatch();
   const { stakingPlatform } = useSelector((state) => state.screens.home);
 
@@ -34,22 +32,18 @@ export default () => {
   const contracts = STAKING_CONTRACTS.filter(
     (contract) => contract.platform === stakingPlatform
   );
-
+  function createMarkup(t) {
+    return {__html: t};
+  }
+  
   return (
     <div className="rewards__wrapper">
       <div className="rewards">
         <div className="rewards__headline">
-          <h1>Bonus 1 Million HI Liquidity Provider Rewards Program</h1>
-          <p>HI/BUSD Liquidity on PancakeSwap</p>
+          <h1>{t("liquidity_page_hero_title")}</h1>
+          <p>{t("liquidity_page_hero_subtitle")}</p>
           <h3>
-            Become a Liquidity Provider on PancakeSwap and get extra rewards!
-            <span>
-              1,000,000 HI will be distributed to liquidity providers who add to
-              the HI/BUSD Pair on PancakeSwap, and then stake those LP tokens on
-              hi. Liquidity providers will gain rewards based on their
-              percentage share of the overall liquidity pool, with 1 million HI
-              split between all staked liquidity providers.
-            </span>
+            {t("liquidity_page_hero_content")}
           </h3>
         </div>
         <div className="rewards__content">
@@ -57,27 +51,22 @@ export default () => {
             <img src={scheduleLogo} alt="logo" />
           </div>
           <div className="content">
-            <h3>SCHEDULE & INCENTIVES</h3>
-            <div>
-              <p> Program Starting: ???</p>
-              <p>Duration: 3 Months (???)</p>
-              <p>Liquidity Pool: HI/BUSD</p>
-              <p>Total Rewards: 1,000,000 HI</p>
-              <p>DEX: PancakeSwap</p>
-              <p>Platform: Binance Smart Chain</p>
+            <h3>{t("liquidity_page_title_1_content_1")}</h3>
+            <div dangerouslySetInnerHTML={createMarkup(t('liquidity_page_title_1'))}>
+             {/* {t("liquidity_page_title_1")} */}
             </div>
             <h4>
               <img src={btn} alt="btn"></img>
-              <p>WATCH TUTORIAL</p>
+              <p>{t("liquidity_page_title_1_button_1")}</p>
             </h4>
           </div>
         </div>
         <div className="rewards__img1">
-          <img src={backR} alt="" />
+          <img src={backR} alt="img" />
         </div>
 
         <div className="rewards__img2">
-          <img src={back} alt="" />
+          <img src={back} alt="img" />
         </div>
         {!isEmpty(contracts) ? (
           contracts.map(({ icon, network, items }, index) => (
@@ -107,60 +96,40 @@ export default () => {
           </div>
         )}
 
-        <div className="rewards__section">HOW DOES IT WORK?</div>
+        <div className="rewards__section">{t("liquidity_Page_title_3")}</div>
         <div className="rewards__step">
           <div className="rewards__item">
             <div className="left">
               <img src={step1} alt="logo" />
             </div>
-            <div className="right">
-              <h3>STEP 1</h3>
-              <div>
-                Go to PancakeSwap and provide liquidity on the HI/BUSD pair at a
-                50:50 ratio.
-              </div>
+            <div className="right" dangerouslySetInnerHTML={createMarkup(t('mobile_liquidity_Page_title_3_content_1'))}>
             </div>
           </div>
           <div className="rewards__item">
             <div className="left">
               <img src={step2} alt="logo" />
             </div>
-            <div className="right">
-              <h3>STEP 2</h3>
-              <div>
-                Stake your Liquidity Provider tokens of HI/BUSD on this webpage.
-              </div>
+            <div className="right" dangerouslySetInnerHTML={createMarkup(t('mobile_liquidity_Page_title_3_content_2'))}>
+             
             </div>
           </div>
           <div className="rewards__item">
             <div className="left">
               <img src={step3} alt="logo" />
             </div>
-            <div className="right">
-              <h3>STEP 3</h3>
-              <div>
-                Earn rewards based on your percentage share of the overall
-                liquidity pool. To earn extra rewards, do not un-stake your LP
-                tokens within 30 days.
-              </div>
+            <div className="right" dangerouslySetInnerHTML={createMarkup(t('mobile_liquidity_Page_title_3_content_3'))}>
             </div>
           </div>
           <div className="rewards__item">
             <div className="left">
               <img src={step4} alt="logo" />
             </div>
-            <div className="right">
-              <h3>STEP 4</h3>
-              <div>
-                Once the Rewards Program is complete or you choose to remove
-                your stake, you may un-stake your LP tokens and claim your
-                rewards.
-              </div>
+            <div className="right" dangerouslySetInnerHTML={createMarkup(t('mobile_liquidity_Page_title_3_content_4'))}>
             </div>
           </div>
         </div>
         <div className="rewards__terms">
-          <a href="">TERMS & CONDITIONS</a>
+          <a href="">{t("liquidity_Page_title_3_button_1")}</a>
         </div>
       </div>
     </div>

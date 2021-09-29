@@ -17,6 +17,7 @@ import useIsStakingNetwork from '@/hooks/useIsStakingNetwork'
 import useSwitchNetwork from '@/hooks/useSwitchNetwork'
 import { getNetworkName } from '@/utils/network'
 import { getPlatformPairName, getRewardTokenName } from '@/utils'
+import { useTranslation } from "react-i18next";
 
 const Scheme = object().noUnknown(false).shape({
   amount: number().positive(),
@@ -51,13 +52,14 @@ const WithdrawForm = ({ handleConnect }) => {
     })
   }
   const renderForm = ({ values, setFieldValue, dirty, isValid }) => {
+    let { t } = useTranslation();
     let { amount } = values
     let decimalsLength = 0
     amount && amount.split('.').length > 1 && (decimalsLength = amount.split('.')[1].length)
     return (
       <Form className='form form--withdraw'>
         <div className='input__wrapper'>
-          <div className={classNames('balance', { 'balance--disabled': !accountAddress })}>Deposited balance - <span>{formatWei(totalStaked)} {symbol}</span></div>
+          <div className={classNames('balance', { 'balance--disabled': !accountAddress })}> { t('liquidity_page_title_5_content_4')} - <span>{formatWei(totalStaked)} {symbol}</span></div>
           <div className='input'>
             <Field name='amount'>
               {({ field }) => <input {...field}   placeholder='0.00' autoComplete='off' />}
@@ -70,8 +72,8 @@ const WithdrawForm = ({ handleConnect }) => {
           <GrayContainer
             decimals={2}
             symbol={getRewardTokenName(networkId)}
-            tootlipText='Rewarded Hi available for claim.'
-            title='Rewards to withdraw'
+            tootlipText={ t('liquidity_page_title_5_content_6')}
+            title={ t('liquidity_page_title_5_title_3')}
             end={isNaN(formatWeiToNumber(accruedRewards)) ? 0 : formatWeiToNumber(accruedRewards)}
             showWithdrawBtn={isStakingNetwork && formatWeiToNumber(accruedRewards) > 0}
             handleWithdraw={() => {
@@ -89,7 +91,7 @@ const WithdrawForm = ({ handleConnect }) => {
               disabled={!(isValid && dirty && amount && decimalsLength <=18)}
               className='button'
             >
-              Withdraw&nbsp;&nbsp;
+               { t('liquidity_page_title_4_button_2')}&nbsp;&nbsp;
               {
                 isWithdraw && <img src={FuseLoader} alt='Hi loader' />
               }
@@ -103,7 +105,7 @@ const WithdrawForm = ({ handleConnect }) => {
               onClick={() => switchNetwork(networkId)}
               className='button'
             >
-              Switch to {getNetworkName(networkId)}
+              { t('liquidity_page_title_5_button_3')} {getNetworkName(networkId)}
             </button>
           )
         }
@@ -119,7 +121,7 @@ const WithdrawForm = ({ handleConnect }) => {
               className='button'
             >
               <img style={{ width: '16px', marginRight: '.5em' }} className='icon' src={walletIcon} />
-              Connect wallet
+              { t('liquidity_page_title_5_button_4')}
             </button>
           )
         }

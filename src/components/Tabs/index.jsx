@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import DepositForm from './Deposit'
 import WithdrawForm from './Withdraw'
 import Stats from './Stats'
+import { useTranslation } from "react-i18next";
 
 const CustomTab = ({ children, ...otherProps }) => (
   <Tab {...otherProps}>
@@ -22,13 +23,14 @@ const CustomTabPanel = ({ children, className, ...otherProps }) => (
 CustomTabPanel.tabsRole = 'TabPanel'
 
 export default ({ handleConnect }) => {
+  let { t } = useTranslation();
   const { accountAddress } = useSelector(state => state.network)
   return (
     <Tabs className='tabs' selectedTabClassName={accountAddress ? 'tabs__tab--selected' : 'tabs__tab--disabled'}>
       <TabList className='tabs__list'>
-        <CustomTab className='tabs__tab'>Deposit</CustomTab>
-        <CustomTab className='tabs__tab'>Withdraw</CustomTab>
-        <CustomTab className='tabs__tab'>Stats</CustomTab>
+        <CustomTab className='tabs__tab'>{ t('liquidity_page_title_4_button_1')}</CustomTab>
+        <CustomTab className='tabs__tab'>{ t('liquidity_page_title_4_button_2')}</CustomTab>
+        <CustomTab className='tabs__tab'>{ t('liquidity_page_title_4_button_3')}</CustomTab>
       </TabList>
       <CustomTabPanel className='tabs__panel'>
         <DepositForm handleConnect={handleConnect} />

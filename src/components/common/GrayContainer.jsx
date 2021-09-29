@@ -7,8 +7,9 @@ import InfoIcon from '@/components/common/InfoIcon.jsx'
 import InfoIconHover from '@/components/common/InfoIconHover.jsx'
 import { formatNumber } from '@/utils/format'
 import { getRewardTokenName } from '@/utils'
-
+import { useTranslation } from "react-i18next";
 const GrayContainer = ({ title, end, showWithdrawBtn = false, handleWithdraw, modifier, symbol, tootlipText, decimals }) => {
+  let { t } = useTranslation();
   const [isHover, setHover] = useState(false)
   const { networkId } = useSelector(state => state.staking)
   const { accountAddress } = useSelector(state => state.network)
@@ -47,7 +48,7 @@ const GrayContainer = ({ title, end, showWithdrawBtn = false, handleWithdraw, mo
               ? <InfoIconHover fill='#7E8AB4' />
               : <InfoIcon fill='#869AAC' />
           }
-          <ReactTooltip className='tooltip' globalEventOff='click' id={title} place='top' effect='solid'>
+          <ReactTooltip style={{background:"#FFFCF2"}} className='tooltip' globalEventOff='click' id={title} place='top' effect='solid'>
             <div>{tootlipText}</div>
           </ReactTooltip>
         </div>
@@ -57,7 +58,7 @@ const GrayContainer = ({ title, end, showWithdrawBtn = false, handleWithdraw, mo
         {
           showWithdrawBtn && (
             <button onClick={handleWithdraw} className='withdraw_stake'>
-              Claim {getRewardTokenName(networkId)}
+             {t('liquidity_Page__title_4_content_8')}  {getRewardTokenName(networkId)}
             </button>
           )
         }

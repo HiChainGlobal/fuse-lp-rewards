@@ -18,8 +18,10 @@ import { getStatsData } from '@/actions/staking'
 import SwitchNetwork from '@/components/common/SwitchNetwork'
 import useSwitchNetwork from '../hooks/useSwitchNetwork'
 import { getRewardTokenName } from '@/utils'
+import { useTranslation } from "react-i18next";
 
 export default ({ handleConnect }) => {
+  let { t } = useTranslation();
   const dispatch = useDispatch()
   const { stakingContract, pairName, lpToken, networkId } = useSelector(state => state.staking)
   const switchNetwork = useSwitchNetwork()
@@ -54,25 +56,31 @@ export default ({ handleConnect }) => {
     // get contract stats
     dispatch(getStatsData(stakingContract, lpToken, networkId))
   }, isRunning ? 5000 : null)
-  
+  let  createMarkup =(t) =>{
+    return {__html: t};
+  }
+  // let  MyComponent =(t) =>{
+  //   return <div dangerouslySetInnerHTML={createMarkup(t)}></div>;
+  // }
   return (
     <>
       {!isSwitchNetworkSupported && <SwitchNetwork networkId={networkId} />}
       <div className='main__wrapper'>
         <div className='main'>
-          <h1 className='title'>Stake Liquidity Provider Tokens</h1>
-          <div className='content'>
-            <p> Stake your LP tokens from providing liquidity in the HI/BUSD pair on Pancakeswap and be eligible for additional rewards from the bonus pool of 1 million HI. </p>
-            Liquidity Providers gain rewards based on their percentage share of the overall liquidity pool.
+          <h1 className='title'>{ t('liquidity_page_title_4')}</h1>
+          <div className='content' dangerouslySetInnerHTML={createMarkup(t('liquidity_page_title_4_content_1'))}>
+            {/* {t('liquidity_page_title_4_content_1')} */}
+            {/* <p> { t('StakingContract.content1')}</p>
+            { t('StakingContract.content2')} */}
           </div>
           <div className='boxs'>
             <InfoBox
               decimals={2}
               name='apy'
-              modalText='APY - Annual Percentage Yield (APY) is the estimated yearly yield for tokens locked. Our calculation is " $ locked * (1 year in second)/(total stake in $ * time remaining in seconds).'
+              modalText= { t('liquidity_page_title_5_content_1')}
               withSymbol={false}
               end={!isExpired ? parseInt(apyPercent) : 0}
-              title='Deposit APY'
+              title={t('liquidity_page_title_4_content_2')}
               Icon={() => (
                 <img src={accountAddress ? percentageIcon : percentageIcongray} />
               )}
@@ -80,9 +88,9 @@ export default ({ handleConnect }) => {
             <InfoBox
               name='deposits'
               symbol={symbol}
-              modalText='Your Deposits - Your deposits shows the total amount of LP tokens you have deposited into the Staking Contract.'
+              modalText={ t('liquidity_page_title_5_content_2')}
               decimals={8}
-              title='Your deposits'
+              title={ t('liquidity_page_title_4_content_3')}
               end={formatWeiToNumber(totalStaked)}
               Icon={() => (
                 <img src={accountAddress ? briefcaseIcon : briefcaseIcongray} />
@@ -94,9 +102,9 @@ export default ({ handleConnect }) => {
               link={`${getBlockExplorerUrl(networkId)}/address/${CONFIG.rewardTokens[networkId]}`}
               name='rewards'
               symbol={getRewardTokenName(networkId)}
-              modalText={"Accrued Rewards - Accrued Rewards refers to the total HI you've earned for your stake"}
+              modalText={t('liquidity_page_title_5_content_3')}
               end={formatWeiToNumber(accrued)}
-              title='Accrued rewards'
+              title={ t('liquidity_page_title_4_content_4')}
               Icon={() => (
                 <img src={accountAddress ? walletIcon : walletIcongray} />
               )}

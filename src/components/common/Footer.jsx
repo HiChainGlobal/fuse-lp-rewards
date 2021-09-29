@@ -1,15 +1,24 @@
 import React, { useState } from 'react'
 
 import telegramIcon from '@/assets/images/tele.svg'
+import telegramIconHover from '@/assets/images/tele_hover.svg'
 import twitterIcon from '@/assets/images/twitter_white.svg'
+import twitterIconHover from '@/assets/images/twitter_white_hover.svg'
 import instagram from '@/assets/images/hi-instagram.svg'
+import instagramHover from '@/assets/images/hi-instagram_hover.svg'
 import reddit from '@/assets/images/hi-reddit.svg'
+import redditHover from '@/assets/images/hi-reddit_hover.svg'
 import subtract from '@/assets/images/hi-subtract.svg'
+import subtractHover from '@/assets/images/hi-subtract_hover.svg'
 import white from '@/assets/images/hi-white.svg' 
-import line from '@/assets/images/hi-line.svg' 
+import whiteHover from '@/assets/images/hi-white_hover.svg' 
+import line from '@/assets/images/hi-line.svg'
+import lineHover from '@/assets/images/hi-line_hover.svg'  
 import kaKao from '@/assets/images/hi-kakao.svg' 
+import kaKaoHover from '@/assets/images/hi-kakao_hover.svg' 
 
 import facebook from '@/assets/images/hi-facebook.svg'
+import facebookHover from '@/assets/images/hi-facebook_hover.svg'
 
 
 const HoverIcon = ({ Icon, Hover, link }) => {
@@ -49,7 +58,7 @@ const Footer = () => {
               <div className='image' style={{ backgroundImage: `url(${telegramIcon})` }} />
             )}
             Hover={() => (
-              <div className='image' style={{  backgroundImage: `url(${telegramIcon})` , backgroundColor: '#30DFC4', borderRadius: '50%'}} />
+              <div className='image' style={{  backgroundImage: `url(${telegramIconHover})`,white:'30px',height:'30px' }}/>
             )}
           />
 
@@ -60,7 +69,7 @@ const Footer = () => {
               <div className='image' style={{ backgroundImage: `url(${twitterIcon})` }} />
             )}
             Hover={() => (
-              <div className='image' style={{ backgroundImage: `url(${twitterIcon})`,  backgroundColor: '#30DFC4', borderRadius: '50%'}} />
+              <div className='image' style={{ backgroundImage: `url(${twitterIconHover})`}} />
             )}
           />
 
@@ -70,7 +79,7 @@ const Footer = () => {
               <div className='image' style={{ backgroundImage: `url(${instagram})` }} />
             )}
             Hover={() => (
-              <div className='image' style={{ backgroundImage: `url(${instagram})`, backgroundColor: '#30DFC4', borderRadius: '50%'}}  />
+              <div className='image' style={{ backgroundImage: `url(${instagramHover})`}}  />
             )}
           />
 
@@ -80,7 +89,7 @@ const Footer = () => {
               <div className='image' style={{ backgroundImage: `url(${facebook})` }} />
             )}
             Hover={() => (
-              <div className='image' style={{ backgroundImage: `url(${facebook})`, backgroundColor: '#30DFC4', borderRadius: '50%'}}  />
+              <div className='image' style={{ backgroundImage: `url(${facebookHover})`}}  />
             )}
           />
            <HoverIcon
@@ -89,7 +98,7 @@ const Footer = () => {
               <div className='image' style={{ backgroundImage: `url(${reddit})` }} />
             )}
             Hover={() => (
-              <div className='image' style={{ backgroundImage: `url(${reddit})`, backgroundColor: '#30DFC4', borderRadius: '50%'}}  />
+              <div className='image' style={{ backgroundImage: `url(${redditHover})`}}  />
             )}
           />
 
@@ -100,7 +109,7 @@ const Footer = () => {
               <div className='image' style={{ backgroundImage: `url(${subtract})` }} />
             )}
             Hover={() => (
-              <div className='image' style={{ backgroundImage: `url(${subtract})`, backgroundColor: '#30DFC4', borderRadius: '50%'}}  />
+              <div className='image' style={{ backgroundImage: `url(${subtractHover})`}}  />
             )}
           />
 
@@ -110,7 +119,7 @@ const Footer = () => {
               <div className='image' style={{ backgroundImage: `url(${white})` }} />
             )}
             Hover={() => (
-              <div className='image' style={{ backgroundImage: `url(${white})`, backgroundColor: '#30DFC4', borderRadius: '50%'}}  />
+              <div className='image' style={{ backgroundImage: `url(${whiteHover})`}}  />
             )}
           />
 
@@ -120,7 +129,7 @@ const Footer = () => {
               <div className='image' style={{ backgroundImage: `url(${line})` }} />
             )}
             Hover={() => (
-              <div className='image' style={{ backgroundImage: `url(${line})`, backgroundColor: '#30DFC4', borderRadius: '50%'}}  />
+              <div className='image' style={{ backgroundImage: `url(${lineHover})`}}  />
             )}
           />
           <HoverIcon
@@ -129,7 +138,7 @@ const Footer = () => {
               <div className='image' style={{ backgroundImage: `url(${kaKao})` }} />
             )}
             Hover={() => (
-              <div className='image' style={{ backgroundImage: `url(${kaKao})`, backgroundColor: '#30DFC4', borderRadius: '50%'}}  />
+              <div className='image' style={{ backgroundImage: `url(${kaKaoHover})`}}  />
             )}
           />
           

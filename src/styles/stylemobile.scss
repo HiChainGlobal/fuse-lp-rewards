@@ -11,7 +11,7 @@
                 }
                 P {
                     width: 334px;
-                    height: 92px;
+                    // height: 92px;
                     font-weight: bold;
                     font-size: 34px;
                     line-height: 135%;
@@ -140,6 +140,7 @@
         font-weight: 500;
     }
     .rewards__step {
+        width: 335px;
         .rewards__item {
             display: flex;
             flex-direction: column;

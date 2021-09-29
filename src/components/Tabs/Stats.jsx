@@ -6,8 +6,9 @@ import moment from 'moment'
 import { formatWeiToNumber, symbolFromPair } from '@/utils/format'
 import GrayContainer from '@/components/common/GrayContainer.jsx'
 import { getRewardTokenName, getPlatformPairName } from '@/utils'
-
+import { useTranslation } from "react-i18next";
 const Stats = () => {
+  let { t } = useTranslation();
   const { stakingContract, pairName, networkId } = useSelector(state => state.staking)
   const stakingContracts = useSelector(state => state.entities.stakingContracts)
   const symbol = `${getPlatformPairName(networkId)} ${symbolFromPair(pairName)}`
@@ -27,16 +28,16 @@ const Stats = () => {
     <div className='stats grid-x grid-margin-x grid-margin-y'>
       <div className='medium-12 small-24 cell'>
         <GrayContainer
-          tootlipText='Total Rewards are the total $HI to be rewarded for the program duration.'
-          title='Total Rewards'
+          tootlipText={ t('liquidity_page_title_5_content_8')}
+          title={ t('liquidity_page_title_5_title_4')}
           symbol={getRewardTokenName(networkId)}
           end={formatWeiToNumber(get(stakingContracts, [stakingContract, 'totalReward'], 0))}
         />
       </div>
       <div className='medium-12 small-24 cell'>
         <GrayContainer
-          tootlipText='Total Deposits are the total LP tokens deposited across all participants.'
-          title='Total Deposits'
+          tootlipText={ t('liquidity_page_title_5_content_8')}
+          title={ t('liquidity_page_title_5_title_5')}
           symbol={symbol}
           end={formatWeiToNumber(globalTotalStake)}
           decimals={2}
@@ -45,7 +46,7 @@ const Stats = () => {
       <div className='medium-12 small-24 cell'>
         <div className='gray_container'>
           <div className='grid-x align-justify align-middle'>
-            <div className='title'>Program Duration</div>
+            <div className='title'>{ t('liquidity_page_title_5_title_6')} </div>
           </div>
           <div className='grid-x align-justify align-middle'>
             <div className='value'>

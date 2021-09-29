@@ -20,7 +20,7 @@ import { getNetworkName } from '@/utils/network'
 import { getPlatformPairName, getRewardTokenName, getContractRewardType } from '@/utils'
 import useIsStakingNetwork from '@/hooks/useIsStakingNetwork'
 import { DEPOSIT_BLACKLIST } from '@/constants'
-
+import { useTranslation } from "react-i18next";
 const Scheme = object().noUnknown(false).shape({
   amount: number().positive().required(),
   submitType: mixed().oneOf(['stake', 'approve']).required().default('stake')
@@ -64,6 +64,7 @@ const DepositForm = ({ handleConnect }) => {
   }
 
   const renderForm = ({ values, setFieldValue }) => {
+    let { t } = useTranslation();
     let { amount } = values
     let  amountToStake = 0 
     let decimals  = 0
@@ -80,7 +81,7 @@ const DepositForm = ({ handleConnect }) => {
     return (
       <Form className='form form--deposit'>
         <div className='input__wrapper'>
-          <div className={classNames('balance', { 'balance--disabled': !accountAddress })}>Balance - <span>{formatWei(balance)} {symbol}</span></div>
+          <div className={classNames('balance', { 'balance--disabled': !accountAddress })}>{  t('liquidity_page_title_4_content_5') } - <span>{formatWei(balance)} {symbol}</span></div>
           <div className='input'>
             <Field name='amount'>
               {({
@@ -99,10 +100,10 @@ const DepositForm = ({ handleConnect }) => {
         <PercentageSelector balance={balance} />
         <GrayContainer
           decimals={2}
-          tootlipText='Your estimated rewards reflect the amount of $HI you are expected to receive by the end of the program assuming there are no changes in deposits.'
+          tootlipText={t('liquidity_page_title_5_content_5') }
           modifier='gray_container--fix-width'
           symbol={getRewardTokenName(stakingNetworkId)}
-          title='your estimated rewards'
+          title={t('liquidity_page_title_4_content_6') }
           end={isNaN(formatWeiToNumber(estimatedAmount)) ? 0 : formatWeiToNumber(estimatedAmount)}
         />
         {
@@ -114,7 +115,7 @@ const DepositForm = ({ handleConnect }) => {
               }}
               className='button'
             >
-              Approve&nbsp;&nbsp;
+              { t('liquidity_page_title_5_button_2')}&nbsp;&nbsp;
               {
                 isApproving && <img src={FuseLoader} alt='Hi loader' />
               }
@@ -131,7 +132,7 @@ const DepositForm = ({ handleConnect }) => {
               disabled={disableDeposit}
               className='button'
             >
-              Deposit&nbsp;&nbsp;
+              { t('liquidity_page_title_4_button_1')}&nbsp;&nbsp;
               {isDeposit && <img src={FuseLoader} alt='Hi loader' />}
             </button>
           )
@@ -142,7 +143,7 @@ const DepositForm = ({ handleConnect }) => {
               onClick={() => switchNetwork(stakingNetworkId)}
               className='button'
             >
-              Switch to {getNetworkName(stakingNetworkId)}
+              { t('liquidity_page_title_5_button_3')} {getNetworkName(stakingNetworkId)}
             </button>
           )
         }
@@ -157,7 +158,7 @@ const DepositForm = ({ handleConnect }) => {
               className='button'
             >
               <img style={{ width: '16px', marginRight: '.5em' }} className='icon' src={walletIcon} />
-              Connect wallet
+              { t('liquidity_page_button_2')}
             </button>
           )
         }

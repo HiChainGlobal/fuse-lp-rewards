@@ -1,4 +1,3 @@
-
 import React, { StrictMode } from 'react'
 import { hot } from 'react-hot-loader'
 import { ModalProvider } from 'react-modal-hook'
@@ -19,21 +18,29 @@ store.runSaga(rootSaga)
 Modal.setAppElement('#root')
 
 const App = () => {
-  return (
-    <StrictMode>
-      <ModalProvider rootComponent={TransitionGroup}>
-        <Provider store={store}>
-          <PersistGate loading={null} persistor={persistor}>
-            <ConnectedRouter history={history}>
-              <ScrollToTopController>
-                <Root />
-              </ScrollToTopController>
-            </ConnectedRouter>
-          </PersistGate>
-        </Provider>
-      </ModalProvider>
-    </StrictMode>
-  )
+    return ( <
+        StrictMode >
+        <
+        ModalProvider rootComponent = { TransitionGroup } >
+        <
+        Provider store = { store } >
+        <
+        PersistGate loading = { null }
+        persistor = { persistor } >
+        <
+        ConnectedRouter history = { history } >
+        <
+        ScrollToTopController >
+        <
+        Root / >
+        <
+        /ScrollToTopController> <
+        /ConnectedRouter> <
+        /PersistGate> <
+        /Provider> <
+        /ModalProvider> <
+        /StrictMode>
+    )
 }
 
 export default hot(module)(App)
