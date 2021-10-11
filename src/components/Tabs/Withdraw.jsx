@@ -59,7 +59,7 @@ const WithdrawForm = ({ handleConnect }) => {
     return (
       <Form className='form form--withdraw'>
         <div className='input__wrapper'>
-          <div className={classNames('balance', { 'balance--disabled': !accountAddress })}> { t('liquidity_page_title_5_content_4')} - <span>{formatWei(totalStaked)} {symbol}</span></div>
+          <div className={classNames('balance', { 'balance--disabled': !accountAddress })}> { t('liquidity_Page_title_4_content_8')} - <span>{formatWei(totalStaked)} {symbol}</span></div>
           <div className='input'>
             <Field name='amount'>
               {({ field }) => <input {...field}   placeholder='0.00' autoComplete='off' />}
@@ -72,8 +72,8 @@ const WithdrawForm = ({ handleConnect }) => {
           <GrayContainer
             decimals={2}
             symbol={getRewardTokenName(networkId)}
-            tootlipText={ t('liquidity_page_title_5_content_6')}
-            title={ t('liquidity_page_title_5_title_3')}
+            tootlipText={ t('liquidity_page_title_4_?_5')}
+            title={ t('liquidity_Page__title_4_content_9')}
             end={isNaN(formatWeiToNumber(accruedRewards)) ? 0 : formatWeiToNumber(accruedRewards)}
             showWithdrawBtn={isStakingNetwork && formatWeiToNumber(accruedRewards) > 0}
             handleWithdraw={() => {
@@ -105,7 +105,7 @@ const WithdrawForm = ({ handleConnect }) => {
               onClick={() => switchNetwork(networkId)}
               className='button'
             >
-              { t('liquidity_page_title_5_button_3')} {getNetworkName(networkId)}
+              Switch to {getNetworkName(networkId)}
             </button>
           )
         }
@@ -121,7 +121,7 @@ const WithdrawForm = ({ handleConnect }) => {
               className='button'
             >
               <img style={{ width: '16px', marginRight: '.5em' }} className='icon' src={walletIcon} />
-              { t('liquidity_page_title_5_button_4')}
+              { t('liquidity_page_button_2')}
             </button>
           )
         }

@@ -1,207 +1,249 @@
-@media screen and (max-width: 600px) {
-    .rewards__wrapper {
-        .rewards {
-            padding: 0;
-            .rewards__headline {
-                max-width: 305px;
-                h1 {
-                    margin-top: 30px 0 2px;
-                    -webkit-text-stroke-width: 1px;
-                    font-size: 34px;
+    @media screen and (max-width: 600px) {
+        .header__logo {
+            width: 80px;
+        }
+        .header__nav {
+            .header__link {
+                margin-right: 6px;
+                font-size: 12px;
+                margin-top: -24px;
+            }
+            .header__wallet {
+                height: 30px;
+                width: 100px;
+                img {
+                    width: 10px;
                 }
-                P {
-                    width: 334px;
-                    // height: 92px;
-                    font-weight: bold;
-                    font-size: 34px;
-                    line-height: 135%;
-                    order: 1;
-                }
-                h3 {
-                    text-align: center;
-                    margin-left: -15px;
-                    max-width: 335px;
-                    height: 185px;
-                    font-size: 14px;
-                    line-height: 130%;
-                    text-align: center;
-                    letter-spacing: 0.01em;
-                    color: #5B6A76;
-                    span {
-                        margin-top: 20px;
-                        display: inline-block;
-                    }
+                .text {
+                    font-size: 12px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
                 }
             }
-            .rewards__content {
-                width: 335px;
-                display: flex;
-                flex-direction: column;
+            .header__wallet__dropdown {
+                right: -100px;
+            }
+        }
+        .header__lang {
+            img {
+                width: 20px;
+            }
+            span {
+                font-size: 12px;
+            }
+            .icon-img {
+                width: 14px;
+            }
+        }
+        .rewards__wrapper {
+            .rewards {
                 padding: 0;
-                .img {
-                    width: 335px;
-                    height: 346px;
-                    img {
-                        width: 100%;
-                        height: 100%;
+                .rewards__headline {
+                    max-width: 305px;
+                    h1 {
+                        margin-top: 30px 0 2px;
+                        -webkit-text-stroke-width: 1px;
+                        font-size: 34px;
+                    }
+                    P {
+                        width: 334px;
+                        // height: 92px;
+                        font-weight: bold;
+                        font-size: 34px;
+                        line-height: 135%;
+                        order: 1;
+                    }
+                    h3 {
+                        text-align: center;
+                        margin-left: -15px;
+                        max-width: 335px;
+                        height: 185px;
+                        font-size: 14px;
+                        line-height: 130%;
+                        text-align: center;
+                        letter-spacing: 0.01em;
+                        color: #5B6A76;
+                        span {
+                            margin-top: 20px;
+                            display: inline-block;
+                        }
                     }
                 }
-                .content {
-                    text-align: center;
+                .rewards__content {
+                    width: 335px;
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
-                    h3 {
-                        font-size: 18px;
-                        font-weight: 600;
-                        line-height: 150%;
+                    padding: 0;
+                    .img {
+                        width: 335px;
+                        height: 346px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
-                    div {
-                        height: 205px;
+                    .content {
+                        text-align: center;
                         display: flex;
                         flex-direction: column;
-                        align-content: flex-end;
-                        p {
+                        align-items: center;
+                        h3 {
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 150%;
+                        }
+                        div {
+                            height: 105px;
+                            display: flex;
+                            flex-direction: column;
+                            align-content: flex-end;
                             font-size: 14px;
                             color: #9E9E9E;
                         }
-                    }
-                    h4 {
-                        margin-top: 62px;
-                        width: 286px;
-                        height: 53px;
-                        img {
-                            height: 100%;
-                            width: 100%;
-                        }
-                        P {
-                            position: relative;
-                            font-size: 16px;
-                            line-height: 140%;
-                            top: -36px;
+                        h4 {
+                            margin-top: 62px;
+                            width: 286px;
+                            height: 53px;
+                            img {
+                                height: 100%;
+                                width: 100%;
+                            }
+                            P {
+                                position: relative;
+                                font-size: 16px;
+                                line-height: 140%;
+                                top: -36px;
+                            }
                         }
                     }
                 }
+                .rewards__img2 {
+                    top: 1230px;
+                }
             }
         }
-    }
-    .rewards__cards-container {
-        width: 270px;
-        height: 100%;
-        .reward-card {
-            background: #FFFFFF;
-            box-shadow: 2.04706px 2.04706px 6.14118px rgba(0, 0, 0, 0.25);
-            margin: 0;
-        }
-        .reward-card__header {
-            .reward-card__badge {
-                font-size: 10px;
+        .rewards__cards-container {
+            width: 270px;
+            height: 100%;
+            .reward-card {
+                background: #FFFFFF;
+                box-shadow: 2.04706px 2.04706px 6.14118px rgba(0, 0, 0, 0.25);
+                margin: 0;
             }
-            .reward-status {
-                width: 8px;
-                height: 8px;
+            .reward-card__header {
+                .reward-card__badge {
+                    font-size: 10px;
+                }
+                .reward-status {
+                    width: 8px;
+                    height: 8px;
+                }
             }
-        }
-        .reward-card__icons {
-            margin: 12px 0 30px;
-            padding: 0;
-            img {
-                width: 50px;
-                height: 50px;
+            .reward-card__icons {
+                margin: 12px 0 30px;
+                padding: 0;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+                .reward-card__title {
+                    font-size: 18px;
+                    margin-left: 0
+                }
             }
-            .reward-card__title {
-                font-size: 18px;
-                margin-left: 0
-            }
-        }
-        .card-section {
-            margin-bottom: 14px;
-            .card-calender__label {
+            .card-section {
+                margin-bottom: 14px;
+                .card-calender__label {
+                    .card-section__label {
+                        font-size: 12px;
+                    }
+                }
+                .card-section__info {
+                    font-size: 14px;
+                }
                 .card-section__label {
                     font-size: 12px;
                 }
             }
-            .card-section__info {
-                font-size: 14px;
-            }
-            .card-section__label {
+            .button {
+                height: 42px;
                 font-size: 12px;
+                border-radius: 8px;
             }
         }
-        .button {
-            height: 42px;
-            font-size: 12px;
-            border-radius: 8px;
+        .rewards__section {
+            margin-top: 80px;
+            font-size: 24px;
+            font-weight: 500;
         }
-    }
-    .rewards__section {
-        margin-top: 80px;
-        font-size: 24px;
-        font-weight: 500;
-    }
-    .rewards__step {
-        width: 335px;
-        .rewards__item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .rewards__step {
             width: 335px;
-            margin-bottom: 48px;
-            .left {
-                margin: 0;
-                width: 46px;
-                height: 60px;
-            }
-            .right {
-                text-align: center;
-                font-size: 14px;
-                h3 {
-                    margin: 8px 0;
+            .rewards__item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 335px;
+                margin-bottom: 48px;
+                .left {
+                    margin: 0;
+                    width: 46px;
+                    height: 60px;
+                    img {
+                        min-width: 100%;
+                    }
                 }
-                div {
+                .right {
+                    text-align: center;
                     font-size: 14px;
+                    h3 {
+                        margin: 8px 0;
+                        font-size: 16px;
+                    }
+                    div {
+                        font-size: 14px;
+                    }
                 }
             }
         }
-    }
-    .rewards__terms {
-        padding-right: 0;
-        text-align: center;
-    }
-    .footer__wrapper {
-        width: 100%;
-        height: 155px;
-        display: flex;
-        justify-content: space-between;
-        padding: 0;
-        .footer {
+        .rewards__terms {
+            padding-right: 0;
+            text-align: center;
+        }
+        .footer__wrapper {
+            width: 100%;
             height: 155px;
-            position: relative;
             display: flex;
-            flex-direction: column;
-            .align-center {
-                position: absolute;
-                font-size: 10px;
-                padding-top: 90px;
-            }
-            .footer__text {
-                position: absolute;
-                font-size: 10px;
-                padding-top: 44px;
-                text-align: center;
-                // width: 327px;
-            }
-            .footer__icons {
-                width: 100%;
-                padding-top: 30px;
-                height: 85px;
-                border-bottom: 1px solid #9E9E9E;
-                position: absolute;
-                .image {
-                    width: 20px;
-                    height: 20px;
+            justify-content: space-between;
+            padding: 0;
+            .footer {
+                height: 155px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                .align-center {
+                    position: absolute;
+                    font-size: 10px;
+                    padding-top: 90px;
+                }
+                .footer__text {
+                    position: absolute;
+                    font-size: 10px;
+                    padding-top: 44px;
+                    text-align: center;
+                    // width: 327px;
+                }
+                .footer__icons {
+                    width: 100%;
+                    padding-top: 30px;
+                    height: 85px;
+                    border-bottom: 1px solid #9E9E9E;
+                    position: absolute;
+                    .image {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
         }
     }
-}

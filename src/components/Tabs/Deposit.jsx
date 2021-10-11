@@ -100,7 +100,7 @@ const DepositForm = ({ handleConnect }) => {
         <PercentageSelector balance={balance} />
         <GrayContainer
           decimals={2}
-          tootlipText={t('liquidity_page_title_5_content_5') }
+          tootlipText={t('liquidity_page_title_4_?_6') }
           modifier='gray_container--fix-width'
           symbol={getRewardTokenName(stakingNetworkId)}
           title={t('liquidity_page_title_4_content_6') }
@@ -115,7 +115,7 @@ const DepositForm = ({ handleConnect }) => {
               }}
               className='button'
             >
-              { t('liquidity_page_title_5_button_2')}&nbsp;&nbsp;
+              { t('liquidity_page_button_3')}&nbsp;&nbsp;
               {
                 isApproving && <img src={FuseLoader} alt='Hi loader' />
               }
@@ -143,7 +143,7 @@ const DepositForm = ({ handleConnect }) => {
               onClick={() => switchNetwork(stakingNetworkId)}
               className='button'
             >
-              { t('liquidity_page_title_5_button_3')} {getNetworkName(stakingNetworkId)}
+              Switch to {getNetworkName(stakingNetworkId)}
             </button>
           )
         }

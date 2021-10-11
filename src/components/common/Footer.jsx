@@ -58,7 +58,7 @@ const Footer = () => {
               <div className='image' style={{ backgroundImage: `url(${telegramIcon})` }} />
             )}
             Hover={() => (
-              <div className='image' style={{  backgroundImage: `url(${telegramIconHover})`,white:'30px',height:'30px' }}/>
+              <div className='image' style={{  backgroundImage: `url(${telegramIconHover})`}}/>
             )}
           />
 

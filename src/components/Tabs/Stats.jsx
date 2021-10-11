@@ -28,16 +28,16 @@ const Stats = () => {
     <div className='stats grid-x grid-margin-x grid-margin-y'>
       <div className='medium-12 small-24 cell'>
         <GrayContainer
-          tootlipText={ t('liquidity_page_title_5_content_8')}
-          title={ t('liquidity_page_title_5_title_4')}
+          tootlipText={ t('liquidity_page_title_4_?_7')}
+          title={ t('liquidity_Page_title_2_content_5')}
           symbol={getRewardTokenName(networkId)}
           end={formatWeiToNumber(get(stakingContracts, [stakingContract, 'totalReward'], 0))}
         />
       </div>
       <div className='medium-12 small-24 cell'>
         <GrayContainer
-          tootlipText={ t('liquidity_page_title_5_content_8')}
-          title={ t('liquidity_page_title_5_title_5')}
+          tootlipText={ t('liquidity_page_title_4_?_8')}
+          title={ t('liquidity_page_title_4_content_9')}
           symbol={symbol}
           end={formatWeiToNumber(globalTotalStake)}
           decimals={2}
@@ -46,7 +46,7 @@ const Stats = () => {
       <div className='medium-12 small-24 cell'>
         <div className='gray_container'>
           <div className='grid-x align-justify align-middle'>
-            <div className='title'>{ t('liquidity_page_title_5_title_6')} </div>
+            <div className='title'>{ t('liquidity_Page_title_4_content_7')} </div>
           </div>
           <div className='grid-x align-justify align-middle'>
             <div className='value'>

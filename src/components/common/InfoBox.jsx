@@ -26,7 +26,8 @@ export default ({ Icon, name, title, end, withSymbol = true, modalText, symbol, 
       <div className='info-modal'>
         <div className='image'><img src={InfoIconModal} /></div>
         <div className='title'>
-         {t('liquidity_page_title_5_title_1')}“{title}”{t('liquidity_page_title_5_title_2')}
+         {t('liquidity_page_title_4_?_11')}“{title}”
+         {/* {t('liquidity_page_title_5_title_2')} */}
         </div>
         <div className='text'>
           {modalText}
@@ -38,7 +39,7 @@ export default ({ Icon, name, title, end, withSymbol = true, modalText, symbol, 
             setModalStatus(false)
           }}
         >
-          {t('liquidity_page_title_5_button_1')}
+          {t('liquidity_page_button_4')}
         </button>
       </div>
     </ReactModal>

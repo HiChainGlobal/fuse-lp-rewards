@@ -48,7 +48,7 @@ const GrayContainer = ({ title, end, showWithdrawBtn = false, handleWithdraw, mo
               ? <InfoIconHover fill='#7E8AB4' />
               : <InfoIcon fill='#869AAC' />
           }
-          <ReactTooltip style={{background:"#FFFCF2"}} className='tooltip' globalEventOff='click' id={title} place='top' effect='solid'>
+          <ReactTooltip  className='tooltip' globalEventOff='click' id={title} place='top' effect='solid'>
             <div>{tootlipText}</div>
           </ReactTooltip>
         </div>

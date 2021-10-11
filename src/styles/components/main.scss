@@ -260,7 +260,7 @@
         }
     }
     @include block(tooltip) {
-        background: rgba(255, 252, 242, .6);
+        background: #FFFCF2;
         border: 1px solid transparent;
         border-radius: 5px;
         max-width: 300px;
@@ -313,4 +313,12 @@
         background: linear-gradient(113.96deg, #FFEEB8 6.41%, #FFFBED 49.79%, #8CFFF1 85.49%);
         border-radius: 7.28479px;
     }
+}
+
+.place-top::after {
+    border-top-color: #FFFCF2 !important;
+}
+
+.place-left::after {
+    border-left-color: #FFFCF2 !important;
 }

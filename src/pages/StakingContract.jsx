@@ -77,7 +77,7 @@ export default ({ handleConnect }) => {
             <InfoBox
               decimals={2}
               name='apy'
-              modalText= { t('liquidity_page_title_5_content_1')}
+              modalText= { t('liquidity_page_title_4_?_1')}
               withSymbol={false}
               end={!isExpired ? parseInt(apyPercent) : 0}
               title={t('liquidity_page_title_4_content_2')}
@@ -88,7 +88,7 @@ export default ({ handleConnect }) => {
             <InfoBox
               name='deposits'
               symbol={symbol}
-              modalText={ t('liquidity_page_title_5_content_2')}
+              modalText={ t('liquidity_page_title_4_?_2')}
               decimals={8}
               title={ t('liquidity_page_title_4_content_3')}
               end={formatWeiToNumber(totalStaked)}
@@ -102,7 +102,7 @@ export default ({ handleConnect }) => {
               link={`${getBlockExplorerUrl(networkId)}/address/${CONFIG.rewardTokens[networkId]}`}
               name='rewards'
               symbol={getRewardTokenName(networkId)}
-              modalText={t('liquidity_page_title_5_content_3')}
+              modalText={t('liquidity_page_title_4_?_3')}
               end={formatWeiToNumber(accrued)}
               title={ t('liquidity_page_title_4_content_4')}
               Icon={() => (

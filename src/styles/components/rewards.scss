@@ -162,6 +162,9 @@
             .left {
                 width: 62px;
                 margin-right: 39px;
+                img {
+                    min-width: 62px;
+                }
             }
             .right {
                 display: flex;
@@ -169,7 +172,7 @@
                 justify-content: center;
                 h3 {
                     color: #000;
-                    font-weight: 500;
+                    font-weight: 600;
                     margin-bottom: 10px;
                 }
             }

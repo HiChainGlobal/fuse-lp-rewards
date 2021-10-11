@@ -10,6 +10,7 @@ import { addressShortener } from "@/utils/format";
 import walletIcon from "@/assets/images/wallet.svg";
 import fuseLogo from "@/assets/images/hi-logo.svg";
 import lang from "@/assets/images/hi-lang.svg";
+import dropdown from "@/assets/images/hi-dropdown.svg"
 
 const NavBar = ({ history, handleConnect, handleLogout }) => {
   let { t ,i18n} = useTranslation()
@@ -92,7 +93,7 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
           <div onClick={homePage} className="header__logo">
             <img style={{ width: "120px" }} alt="logo" src={fuseLogo} />
           </div>
-          <button
+          {/* <button
             ref={hamburgerRef}
             className="hamburger-button__container"
             onClick={() => setMenuOpen(!isOpen)}
@@ -100,15 +101,12 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
             <span className="hamburger-button__top" />
             <span className="hamburger-button__middle" />
             <span className="hamburger-button__bottom" />
-          </button>
+          </button> */}
           <div
             className={classNames("header__nav", { header__nav__open: isOpen })}
           >
             <div className="header__link__wrapper">
-              <div className="header__lang" onClick={isShow}>
-                <img src={lang} alt="lang" />
-                <span>{langs[selectIndex].short}</span>
-              </div>
+             
 
               <a
                 rel="noreferrer noopener"
@@ -150,7 +148,7 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
                   })}
                 >
                   <div className="header__wallet__disconnect">
-                   {t('liquidity_page_title_5_button_6')} {get(providerInfo, "name")}{" "}
+                   {/* {t('liquidity_page_title_5_button_6')} {get(providerInfo, "name")}{" "}
                     <a
                       href="#"
                       className="header__wallet__disconnect__link"
@@ -160,6 +158,16 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
                       }}
                     >
                       ({t('liquidity_page_title_5_button_7')})
+                    </a> */}
+                     <a
+                      href="#"
+                      className="header__wallet__disconnect__link"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleLogout();
+                      }}
+                    >
+                    {t('liquidity_page_button_5')}
                     </a>
                   </div>
                 </div>
@@ -174,6 +182,11 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
                 <span className="text">{t('liquidity_page_button_2')}</span>
               </div>
             )}
+          </div>
+          <div className="header__lang" onClick={isShow}>
+              <img src={lang} alt="lang" />
+              <span>{langs[selectIndex].short}</span>
+              <img className="icon-img" src={dropdown} alt="lang" />
           </div>
         </div>
       </header>

@@ -25,15 +25,15 @@ const AddLiquidity = () => {
             <div className='content cell large-auto'>
               <img src={alertIcon} />
               <div className='text'>
-                <div className='beta'   style={{color:'#333' }}>{t('liquidity_page_title_5_title_7')}</div>
-                {t('liquidity_page_title_5_title_8')} {swapName} {symbol}{t('liquidity_page_title_5_title_9')}
+                <a className='beta'   style={{color:'#333' }}>{t('liquidity_Page_header_title')}</a>
+                {/* {t('liquidity_page_title_5_title_8')} {swapName} {symbol}{t('liquidity_page_title_5_title_9')} */}
                 <br />
                 <a
                   rel='noreferrer noopener'
                   target='_blank'
                   href='https://resources.hi.com/new-liquidity-reward-program-on-pancakeswap'
                 >
-                  {t('liquidity_page_title_5_title_10')}
+                  {t("liquidity_Page_header_subtitle")}
                 </a>
               </div>
             </div>
@@ -44,7 +44,8 @@ const AddLiquidity = () => {
               href={(getAddLiquidityLink(pairs, networkId))}
             >
               <button className='button'   style={{background:'#002855' }}>
-               {t('liquidity_page_title_5_button_5')} {swapName}
+              {t('liquidity_Page_header_button_1')}
+               {/* {t('liquidity_Page_header_button_1')} {swapName} */}
               </button>
             </a>
           </div>
