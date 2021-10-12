@@ -147,6 +147,7 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
                     "header__wallet__dropdown--open": isDropdownOpen,
                   })}
                 >
+                 
                   <div className="header__wallet__disconnect">
                    {/* {t('liquidity_page_title_5_button_6')} {get(providerInfo, "name")}{" "}
                     <a
@@ -167,6 +168,7 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
                         handleLogout();
                       }}
                     >
+                    <img className="icon" src={walletIcon} />
                     {t('liquidity_page_button_5')}
                     </a>
                   </div>

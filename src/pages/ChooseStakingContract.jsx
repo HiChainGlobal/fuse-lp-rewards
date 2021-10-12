@@ -53,7 +53,6 @@ export default () => {
           <div className="content">
             <h3>{t("liquidity_page_title_1_content_1")}</h3>
             <div dangerouslySetInnerHTML={createMarkup(t('liquidity_page_title_1'))}>
-             {/* {t("liquidity_page_title_1")} */}
             </div>
             <h4>
               <img src={btn} alt="btn"></img>

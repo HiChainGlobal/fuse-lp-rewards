@@ -94,12 +94,17 @@
                             line-height: 150%;
                         }
                         div {
-                            height: 105px;
-                            display: flex;
-                            flex-direction: column;
-                            align-content: flex-end;
+                            // height: 105px;
+                            // display: flex;
+                            // flex-direction: column;
+                            // align-content: flex-end;
+                            line-height: 150%;
                             font-size: 14px;
                             color: #9E9E9E;
+                            b {
+                                display: inline-block;
+                                height: 30px;
+                            }
                         }
                         h4 {
                             margin-top: 62px;
@@ -118,8 +123,11 @@
                         }
                     }
                 }
+                .rewards__img1 {
+                    top: 1540px;
+                }
                 .rewards__img2 {
-                    top: 1230px;
+                    top: 1290px;
                 }
             }
         }
@@ -196,7 +204,8 @@
                 .right {
                     text-align: center;
                     font-size: 14px;
-                    h3 {
+                    b {
+                        display: inline-block;
                         margin: 8px 0;
                         font-size: 16px;
                     }
