@@ -68,7 +68,7 @@
             justify-content: center;
             align-items: center;
             right: 0;
-            left: 0;
+            // left: 0;
         }
         .header__lang__open__ios {
             margin-top: 80px;
@@ -84,7 +84,7 @@
         .header__show {
             width: 100%;
             right: 0;
-            // left: 0;
+            left: 0;
             z-index: 100;
             a {
                 display: inline-block;
