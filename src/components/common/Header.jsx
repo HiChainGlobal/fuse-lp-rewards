@@ -3,17 +3,17 @@ import classNames from "classnames";
 import get from "lodash/get";
 import { useRouteMatch, withRouter } from "react-router";
 import { useSelector } from "react-redux";
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next";
 import AddLiquidity from "@/components/common/AddLiquidity";
 import useOutsideClick from "@/hooks/useOutsideClick.jsx";
 import { addressShortener } from "@/utils/format";
 import walletIcon from "@/assets/images/wallet.svg";
 import fuseLogo from "@/assets/images/hi-logo.svg";
 import lang from "@/assets/images/hi-lang.svg";
-import dropdown from "@/assets/images/hi-dropdown.svg"
+import dropdown from "@/assets/images/hi-dropdown.svg";
 
 const NavBar = ({ history, handleConnect, handleLogout }) => {
-  let { t ,i18n} = useTranslation()
+  let { t, i18n } = useTranslation();
   const stakingPageMatch = useRouteMatch("/staking-contract");
   const { stakingContract, lpToken } = useSelector((state) => state.staking);
   const stakingContracts = useSelector(
@@ -31,7 +31,7 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
 
   useOutsideClick(hamburgerRef, () => {
     if (isOpen) {
-      setMenuOpen(false);
+      setMenuOpen(true);
     }
   });
 
@@ -51,49 +51,58 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
     0
   );
   const langs = [
-    {short:'繁' , label: "繁體中文", value: "zh_HK" },
-    {short:'EN' , label: "English", value: "en" },
-    // {short:'简' , label: "简体中文", value: "zh_CN" },
-    // {short:'FR' ,label: "Français", value: "fr" },
-    // {short:'DE' , label: "Deutsch", value: "de" },
-    // {short:'IT' ,label: "Italiano", value: "it" },
-    // {short:'日' , label: "日本語", value: "zh_CN" },
-    // {short:'한국어' , label: "한국어", value: "ko" },
-    // {short:'PL' ,label: "Polski", value: "pl" },
-    // {short:'PT' , label: "Português", value: "pt" },
-    // {short:'RU' , label: "Pусский", value: "ru" },
-    // {short:'ES' ,label: "Español", value: "es" },
-    // {short:'TR' , label: "Türkçe", value: "tr" },
-    // {short:'RO' , label: "Română", value: "ro" },
+    { short: "EN", label: "English", value: "en" },
+    { short: "繁", label: "繁體中文", value: "zh_HK" },
+    { short: "FR", label: "Français", value: "fr" },
+    { short: "DE", label: "Deutsch", value: "de" },
+    { short: "IT", label: "Italiano", value: "it" },
+    { short: "日", label: "日本語", value: "ja" },
+    { short: "한국어", label: "한국어", value: "ko" },
+    { short: "PL", label: "Polski", value: "pl" },
+    { short: "PT", label: "Português", value: "pt" },
+    { short: "RU", label: "Pусский", value: "ru" },
+    { short: "ES", label: "Español", value: "es" },
+    { short: "TR", label: "Türkçe", value: "tr" },
+    { short: "RO", label: "Română", value: "ro" },
   ];
-  const [show, setShow] = useState(false)
-  let I18N= localStorage.getItem('I18N')
-  let select = 1
-  langs.forEach((item,index)=>{
-    if(item.value == I18N){
-      select  = index 
+  const [show, setShow] = useState(false);
+  let I18N = localStorage.getItem("I18N");
+  let select = 0;
+  langs.forEach((item, index) => {
+    if (item.value == I18N) {
+      select = index;
     }
-  })
-  let [selectIndex,setSelectIndex] = useState(select)
-  const isShow=()=>{
-    setShow(!show)
+  });
+  let [selectIndex, setSelectIndex] = useState(select);
+  const isShow = () => {
+    setShow(!show);
+  };
+  const selectLang = (index, value) => {
+    if (isOpen) {
+      setMenuOpen(false);
+    }
+    localStorage.setItem("I18N", value);
+    i18n.changeLanguage((i18n.language = value));
+    setSelectIndex(index);
+    setShow(false);
+  };
+  function isIOS(){
+   return  !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
   }
-  const selectLang =(index,value)=>{
-    console.log(index,value);
-    localStorage.setItem('I18N',value)
-    i18n.changeLanguage(i18n.language=value)
-    setSelectIndex(index)
-    setShow(false)
-  }
-    
   return (
     <div style={{ position: "relative" }}>
       <header className="header__wrapper">
         <div className="header">
           <div onClick={homePage} className="header__logo">
-            <img style={{ width: "120px" }} alt="logo" src={fuseLogo} />
+            <a
+              rel="noreferrer noopener"
+              target="_blank"
+              href="https://hi.com/liquidity-providers"
+            >
+              <img style={{ width: "120px" }} alt="logo" src={fuseLogo} />
+            </a>
           </div>
-          {/* <button
+          <button
             ref={hamburgerRef}
             className="hamburger-button__container"
             onClick={() => setMenuOpen(!isOpen)}
@@ -101,13 +110,15 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
             <span className="hamburger-button__top" />
             <span className="hamburger-button__middle" />
             <span className="hamburger-button__bottom" />
-          </button> */}
+          </button>
           <div
-            className={classNames("header__nav", { header__nav__open: isOpen })}
+            className={classNames("header__nav", {
+              header__nav__open: isOpen,
+              "header__nav__dropdown--open": isDropdownOpen,
+              header__nav__show: show,
+            })}
           >
             <div className="header__link__wrapper">
-             
-
               <a
                 rel="noreferrer noopener"
                 className={classNames("header__link", {
@@ -117,15 +128,27 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
                 href="https://resources.hi.com/new-liquidity-reward-program-on-pancakeswap"
                 style={{ color: "#000" }}
               >
-               { t('liquidity_page_button_1')}
+                {t("liquidity_page_button_1")}
               </a>
             </div>
-            <div className={classNames('header__lang-tags','header__right',{'header__show':show})}> 
-              {
-                langs.map(({label,value},index) => {
-                 return  <a  onClick={()=>selectLang(index,value)}  href="#" key={index} className={ selectIndex==index?'active':''} >{label}</a>
-                  })
-                }
+            <div
+              className={classNames("header__lang-tags", "header__right", {
+                header__show: show,
+                header__show__nav: show,
+              })}
+            >
+              {langs.map(({ label, value }, index) => {
+                return (
+                  <a
+                    onClick={() => selectLang(index, value)}
+                    href="#"
+                    key={index}
+                    className={selectIndex == index ? "active" : ""}
+                  >
+                    {label}
+                  </a>
+                );
+              })}
             </div>
             {accountAddress ? (
               <div
@@ -147,9 +170,8 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
                     "header__wallet__dropdown--open": isDropdownOpen,
                   })}
                 >
-                 
                   <div className="header__wallet__disconnect">
-                   {/* {t('liquidity_page_title_5_button_6')} {get(providerInfo, "name")}{" "}
+                    {/* {t('liquidity_page_title_5_button_6')} {get(providerInfo, "name")}{" "}
                     <a
                       href="#"
                       className="header__wallet__disconnect__link"
@@ -160,7 +182,7 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
                     >
                       ({t('liquidity_page_title_5_button_7')})
                     </a> */}
-                     <a
+                    <a
                       href="#"
                       className="header__wallet__disconnect__link"
                       onClick={(e) => {
@@ -168,8 +190,8 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
                         handleLogout();
                       }}
                     >
-                    <img className="icon" src={walletIcon} />
-                    {t('liquidity_page_button_5')}
+                      <img className="icon" src={walletIcon} />
+                      {t("liquidity_page_button_5")}
                     </a>
                   </div>
                 </div>
@@ -181,14 +203,21 @@ const NavBar = ({ history, handleConnect, handleLogout }) => {
                 style={{ background: "#30DFC4" }}
               >
                 <img className="icon" src={walletIcon} />
-                <span className="text">{t('liquidity_page_button_2')}</span>
+                <span className="text">{t("liquidity_page_button_2")}</span>
               </div>
             )}
-          </div>
-          <div className="header__lang" onClick={isShow}>
-              <img src={lang} alt="lang" />
-              <span>{langs[selectIndex].short}</span>
-              <img className="icon-img" src={dropdown} alt="lang" />
+            <div
+              className={classNames("header__lang", {
+                header__lang__open: isOpen,  header__lang__open__ios: isIOS()
+              })}
+              onClick={isShow}
+            >
+              <div className=" header__lang__open_content">
+                <img src={lang} alt="lang" />
+                <span>{langs[selectIndex].short}</span>
+                <img className="icon-img" src={dropdown} alt="lang" />
+              </div>
+            </div>
           </div>
         </div>
       </header>

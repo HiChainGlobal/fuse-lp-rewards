@@ -6,11 +6,9 @@ import reverse from "lodash/reverse";
 import RewardCard from "@/components/common/RewardCard";
 import comingSoon from "@/assets/images/coming-soon.png";
 import { selectStakingPlatform } from "@/actions/staking";
-import {
-  PAIRS_ICONS,
-  STAKING_CONTRACTS,
-} from "@/constants";
+import { PAIRS_ICONS, STAKING_CONTRACTS } from "@/constants";
 import { useTranslation } from "react-i18next";
+import classNames from "classnames";
 import scheduleLogo from "@/assets/images/hi-schedule.svg";
 import btn from "@/assets/images/hi-btn.svg";
 import step1 from "@/assets/images/hi-step1.svg";
@@ -33,18 +31,22 @@ export default () => {
     (contract) => contract.platform === stakingPlatform
   );
   function createMarkup(t) {
-    return {__html: t};
+    return { __html: t };
   }
-  
+  function isIOS(){
+    return  !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+   }
   return (
     <div className="rewards__wrapper">
       <div className="rewards">
         <div className="rewards__headline">
           <h1>{t("liquidity_page_hero_title")}</h1>
           <p>{t("liquidity_page_hero_subtitle")}</p>
-          <h3>
-            {t("liquidity_page_hero_content")}
-          </h3>
+          <h3
+            dangerouslySetInnerHTML={createMarkup(
+              t("liquidity_page_hero_content")
+            )}
+          ></h3>
         </div>
         <div className="rewards__content">
           <div className="img">
@@ -52,27 +54,46 @@ export default () => {
           </div>
           <div className="content">
             <h3>{t("liquidity_page_title_1_content_1")}</h3>
-            <div dangerouslySetInnerHTML={createMarkup(t('liquidity_page_title_1'))}>
-            </div>
+            <div
+              dangerouslySetInnerHTML={createMarkup(
+                t("liquidity_page_title_1")
+              )}
+            ></div>
             <h4>
-              <img src={btn} alt="btn"></img>
-              <p>{t("liquidity_page_title_1_button_1")}</p>
+              <a
+                rel="noreferrer noopener"
+                target="_blank"
+                href="https://resources.hi.com/new-liquidity-reward-program-on-pancakeswap"
+              >
+                <img src={btn} alt="btn"></img>
+                <p>{t("liquidity_page_title_1_button_1")}</p>
+              </a>
             </h4>
           </div>
         </div>
-        <div className="rewards__img1">
-          <img src={backR} alt="img" />
+        {/* <div className="rewards__img1">
+          <img src={backR} alt="img" /> 
         </div>
 
         <div className="rewards__img2">
           <img src={back} alt="img" />
-        </div>
+        </div> */}
         {!isEmpty(contracts) ? (
           contracts.map(({ icon, network, items }, index) => (
             <div
               className="rewards__cards-container grid-x align-middle"
               key={index}
             >
+              <div className={classNames("rewards__img1", {
+                 rewards__img1__ios: isIOS()
+              })} >
+                <img src={backR} alt="img" />
+              </div>
+              <div className={classNames("rewards__img2", {
+                 rewards__img2__ios: isIOS()
+              })} >
+                <img src={back} alt="img" />
+              </div>
               {reverse(
                 map(items, (contract) => {
                   const { contractAddress } = contract;
@@ -101,34 +122,55 @@ export default () => {
             <div className="left">
               <img src={step1} alt="logo" />
             </div>
-            <div className="right" dangerouslySetInnerHTML={createMarkup(t('mobile_liquidity_Page_title_3_content_1'))}>
-            </div>
+            <div
+              className="right"
+              dangerouslySetInnerHTML={createMarkup(
+                t("liquidity_Page_title_3_content_1")
+              )}
+            ></div>
           </div>
           <div className="rewards__item">
             <div className="left">
               <img src={step2} alt="logo" />
             </div>
-            <div className="right" dangerouslySetInnerHTML={createMarkup(t('mobile_liquidity_Page_title_3_content_2'))}>
-             
-            </div>
+            <div
+              className="right"
+              dangerouslySetInnerHTML={createMarkup(
+                t("liquidity_Page_title_3_content_2")
+              )}
+            ></div>
           </div>
           <div className="rewards__item">
             <div className="left">
               <img src={step3} alt="logo" />
             </div>
-            <div className="right" dangerouslySetInnerHTML={createMarkup(t('mobile_liquidity_Page_title_3_content_3'))}>
-            </div>
+            <div
+              className="right"
+              dangerouslySetInnerHTML={createMarkup(
+                t("liquidity_Page_title_3_content_3")
+              )}
+            ></div>
           </div>
           <div className="rewards__item">
             <div className="left">
               <img src={step4} alt="logo" />
             </div>
-            <div className="right" dangerouslySetInnerHTML={createMarkup(t('mobile_liquidity_Page_title_3_content_4'))}>
-            </div>
+            <div
+              className="right"
+              dangerouslySetInnerHTML={createMarkup(
+                t("liquidity_Page_title_3_content_4")
+              )}
+            ></div>
           </div>
         </div>
         <div className="rewards__terms">
-          <a href="">{t("liquidity_Page_title_3_button_1")}</a>
+          <a
+            rel="noreferrer noopener"
+            target="_blank"
+            href="https://hi.com/liquidity-terms-conditions"
+          >
+            {t("liquidity_Page_title_3_button_1")}
+          </a>
         </div>
       </div>
     </div>

@@ -2,6 +2,13 @@
         .header__logo {
             width: 80px;
         }
+        .header__wrapper {
+            z-index: 1;
+        }
+        .header__wallet__dropdown {
+            top: 90px;
+            right: -90%;
+        }
         .header__nav {
             .header__link {
                 margin-right: 6px;
@@ -10,7 +17,6 @@
             }
             .header__wallet {
                 height: 30px;
-                width: 100px;
                 img {
                     width: 10px;
                 }
@@ -21,20 +27,73 @@
                     text-overflow: ellipsis;
                 }
             }
-            .header__wallet__dropdown {
-                right: -100px;
+        }
+        .header__nav__open {
+            display: flex;
+            justify-content: center;
+            padding: 0 0 60px 0;
+            .header__link__wrapper {
+                margin: 4em 0 1em;
             }
         }
+        .header__nav__dropdown--open {
+            padding: 0px 0 146px 0
+        }
+        .header__nav__show {
+            padding: 0px 0 400px 0;
+        }
+        .header__show__nav {
+            // padding: 0 12%;
+            box-shadow: none;
+            // border: 1px solid #000;
+            // display: flex;
+            // flex-wrap: wrap;
+            // justify-content: space-between
+            text-align: center;
+        }
+        .header__nav {
+            margin: 0;
+        }
         .header__lang {
-            img {
-                width: 20px;
+            display: none;
+        }
+        .header__lang__open {
+            display: block;
+            position: absolute;
+            height: 30px;
+            width: 100vw;
+            text-align: center;
+            margin-top: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 0;
+            left: 0;
+        }
+        .header__lang__open__ios {
+            margin-top: 80px;
+        }
+        .header__lang__open_content {
+            border: 2px solid #30DFC4;
+            box-sizing: border-box;
+            border-radius: 8px;
+            width: 100px;
+            height: 30px;
+            z-index: 3;
+        }
+        .header__show {
+            width: 100%;
+            right: 0;
+            left: 0;
+            z-index: 100;
+            a {
+                display: inline-block;
+                // border: 1px solid #000;
+                // text-align: center;
             }
-            span {
-                font-size: 12px;
-            }
-            .icon-img {
-                width: 14px;
-            }
+        }
+        .header__lang-tags {
+            top: 160px;
         }
         .rewards__wrapper {
             .rewards {
@@ -75,6 +134,7 @@
                     display: flex;
                     flex-direction: column;
                     padding: 0;
+                    margin-bottom: 100px;
                     .img {
                         width: 335px;
                         height: 346px;
@@ -101,6 +161,7 @@
                             line-height: 150%;
                             font-size: 14px;
                             color: #9E9E9E;
+                            height: 260px;
                             b {
                                 display: inline-block;
                                 height: 30px;
@@ -124,10 +185,16 @@
                     }
                 }
                 .rewards__img1 {
-                    top: 1540px;
+                    margin-top: 340px;
+                }
+                .rewards__img1__ios {
+                    margin-top: 140px;
                 }
                 .rewards__img2 {
-                    top: 1290px;
+                    margin-top: -270px;
+                }
+                .rewards__img2__ios {
+                    margin-top: -140px;
                 }
             }
         }

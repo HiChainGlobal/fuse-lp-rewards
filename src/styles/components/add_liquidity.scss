@@ -1,6 +1,8 @@
 @include block(add_liquidity) {
     background: linear-gradient(90deg, #FFEFB6 0%, #FFF8E2 33.85%, #C6EFED 69.1%, #30DFC4 100%);
+    border: 1px solid #000;
     padding: 0.5em;
+    z-index: 1;
     @include breakpoint(medium down) {
         height: unset;
     }
