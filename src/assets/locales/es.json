@@ -6,7 +6,7 @@
     "liquidity_page_hero_subtitle": "Liquidez HI\/BUSD en PancakeSwap",
     "liquidity_page_title_1_content_1": "CALENDARIO E INCENTIVOS",
     "liquidity_page_title_1_button_1": "VER TUTORIAL",
-    "liquidity_page_title_1": "<b>Comienzo del programa:<\/b> ???<br>\n<b>Duración:<\/b> 3 meses<br>\n<b>Fondo de liquidez<\/b>: HI\/BUSD<br>\n<b>Recompensa total:<\/b> 1.000.000 HI<br>\n<b>DEX:<\/b> PancakeSwap<br>\n<b>Plataforma:<\/b> Binance Smart Chain<br>",
+    "liquidity_page_title_1": "<b>Comienzo del programa:<\/b>15 de oct<br>\n<b>Duración:<\/b> 3 meses<br>\n<b>Fondo de liquidez<\/b>: HI\/BUSD<br>\n<b>Recompensa total:<\/b> 1.000.000 HI<br>\n<b>DEX:<\/b> PancakeSwap<br>\n<b>Plataforma:<\/b> Binance Smart Chain<br>",
     "liquidity_Page__title_2": "HI\/BUSD",
     "liquidity_Page_title_2_content_3": "Tamaño del fondo",
     "liquidity_Page_title_2_content_4": "517,74 BUSD \/<br>\n4351,05 HI<\/br>",
@@ -32,7 +32,7 @@
     "liquidity_page_title_4_button_1": "Depósito",
     "liquidity_page_title_4_content_3": "SUS DEPÓSITOS",
     "liquidity_page_title_4_content_4": "RECOMPENSAS ACUMULADAS",
-    "liquidity_page_title_4_content_5": "Saldo - 0 CAKE HI-BUSD",
+    "liquidity_page_title_4_content_5": "Saldo",
     "liquidity_page_title_4_content_6": "SUS RECOMPENSAS ESTIMADAS",
     "liquidity_Page__title_4_content_8": "Reclamar HI",
     "liquidity_Page__title_4_content_9": "RECOMPENSAS A RETIRAR",
@@ -60,9 +60,8 @@
     "liquidity_page_button_3": "Aprobar",
     "liquidity_page_button_4": "CERRAR",
     "liquidity_Page_title_4_content_7": "DURACION DEL PROGRAMA",
-    "liquidity_Page_title_4_content_8": "Saldo depositado - 0 CAKE HI-BUSD",
+    "liquidity_Page_title_4_content_8": "Saldo depositado",
     "liquidity_Page_header_button_1": "Agregue liquidez en PancakeSwap",
-    "liquidity_page_title_4_content_8": "TOTAL DE LA PISCINA ADICIONAL",
     "liquidity_page_title_4_content_9": "DEPÓSITOS TOTALES",
     "liquidity_page_button_5": "Conectado a MetaMask (desconectar)"
 }

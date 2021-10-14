@@ -6,7 +6,7 @@
     "liquidity_page_hero_subtitle": "HI\/BUSD Liquidität auf PancakeSwap",
     "liquidity_page_title_1_content_1": "ZEITPLAN & ANREIZE",
     "liquidity_page_title_1_button_1": "TUTORIAL ANSEHEN",
-    "liquidity_page_title_1": "<b>Programmstart:<\/b> ??? <br>\n<b>Dauer:<\/b> 3 Monate <br>\n<b>Liquidity Pool<\/b>: HI\/BUSD<br>\n<b>Gestotal Rewards:<\/b> 1.000.000 HI<br>\n<b>DEX:<\/b>PancakeSwap<br>\n<b>Platform:<\/b> Binance Smart Chain<br>",
+    "liquidity_page_title_1": "<b>Programmstart:<\/b> Okt 15 <br>\n<b>Dauer:<\/b> 3 Monate <br>\n<b>Liquidity Pool<\/b>: HI\/BUSD<br>\n<b>Gestotal Rewards:<\/b> 1.000.000 HI<br>\n<b>DEX:<\/b>PancakeSwap<br>\n<b>Platform:<\/b> Binance Smart Chain<br>",
     "liquidity_Page__title_2": "HI\/BUSD",
     "liquidity_Page_title_2_content_3": "POOLGRÖSSE",
     "liquidity_Page_title_2_content_4": "517,74 BUSD \/<br>\n4351,05 HI",
@@ -32,7 +32,7 @@
     "liquidity_page_title_4_button_1": "Einzahlung",
     "liquidity_page_title_4_content_3": "IHRE EINZAHLUNGEN",
     "liquidity_page_title_4_content_4": "ANGESAMMELTE BELOHNUNGEN",
-    "liquidity_page_title_4_content_5": "Saldo - 0 CAKE HI-BUSD",
+    "liquidity_page_title_4_content_5": "Saldo",
     "liquidity_page_title_4_content_6": "IHRE GESCHÄTZTEN BELOHNUNGEN",
     "liquidity_Page__title_4_content_8": "HI beanspruchen",
     "liquidity_Page__title_4_content_9": "BELOHNUNGEN ZUM ABHEBEN",
@@ -60,9 +60,8 @@
     "liquidity_page_button_3": "Genehmigen",
     "liquidity_page_button_4": "SCHLIESSEN",
     "liquidity_Page_title_4_content_7": "PROGRAMMDAUER",
-    "liquidity_Page_title_4_content_8": "Eingezahltes Guthaben - 0 CAKE HI-BUSD",
+    "liquidity_Page_title_4_content_8": "Eingezahltes Guthaben",
     "liquidity_Page_header_button_1": "Fügen Sie Liquidität bei PancakeSwap hinzu",
-    "liquidity_page_title_4_content_8": "BONUS-POOL GESAMT",
     "liquidity_page_title_4_content_9": "GESAMTEINZAHLUNGEN",
     "liquidity_page_button_5": "Verbunden mit MetaMask (trennen)"
 }

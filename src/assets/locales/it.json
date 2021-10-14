@@ -6,7 +6,7 @@
     "liquidity_page_hero_subtitle": "Liquidità HI\/BUSD su PancakeSwap",
     "liquidity_page_title_1_content_1": "PROGRAMMA E INCENTIVI",
     "liquidity_page_title_1_button_1": "GUARDA IL TUTORIAL",
-    "liquidity_page_title_1": "<b> Inizio del programma: <\/b> ??? <br>\n <b> Durata: <\/b> 3 mesi<br>\n <b> Pool di liquidità <\/b> : HI\/BUSD <br>\n <b> Premi totali: <\/b> 1.000.000 HI <br>\n <b> DEX: <\/b> PancakeSwap <br>\n <b> Piattaforma: <\/b> Binance Smart Chain <br>",
+    "liquidity_page_title_1": "<b> Inizio del programma: <\/b> 15 ottobre <br>\n <b> Durata: <\/b> 3 mesi<br>\n <b> Pool di liquidità <\/b> : HI\/BUSD <br>\n <b> Premi totali: <\/b> 1.000.000 HI <br>\n <b> DEX: <\/b> PancakeSwap <br>\n <b> Piattaforma: <\/b> Binance Smart Chain <br>",
     "liquidity_Page__title_2": "HI\/BUSD",
     "liquidity_Page_title_2_content_3": "DIMENSIONE DEL POOL ",
     "liquidity_Page_title_2_content_4": "517.74 BUSD \/\n4351.05 HI",
@@ -32,7 +32,7 @@
     "liquidity_page_title_4_button_1": "Deposita",
     "liquidity_page_title_4_content_3": "I TUOI DEPOSITI",
     "liquidity_page_title_4_content_4": "RICOMPENSE MATURATE",
-    "liquidity_page_title_4_content_5": "Saldo - 0 CAKE HI-BUSD",
+    "liquidity_page_title_4_content_5": "Saldo",
     "liquidity_page_title_4_content_6": "LE TUE RICOMPENSE STIMATE",
     "liquidity_Page__title_4_content_8": "Richiedi HI",
     "liquidity_Page__title_4_content_9": "PREMI DA RITIRARE",
@@ -62,7 +62,6 @@
     "liquidity_Page_title_4_content_7": "DURATA DEL PROGRAMMA",
     "liquidity_Page_title_4_content_8": "Saldo depositato",
     "liquidity_Page_header_button_1": "Aggiungi liquidità su PancakeSwap",
-    "liquidity_page_title_4_content_8": "BONUS TOTALE PISCINA",
     "liquidity_page_title_4_content_9": "DEPOSITI TOTALI",
     "liquidity_page_button_5": "Connesso a MetaMask (disconnetti)"
 }

@@ -294,21 +294,10 @@
         }
     }
     @include block(withdraw_stake) {
-        // width: 103px;
-        // background: #ffffff;
-        // border: 3px solid #222;
-        // box-sizing: border-box;
-        // border-radius: 100px;
-        // text-align: center;
-        // padding: 0.2em;
-        // font-style: normal;
-        // font-weight: 500;
-        // font-size: 0.75em;
-        // line-height: 11px;
         font-weight: 500;
         color: #222;
         box-shadow: 2px 2px 4px rgba(66, 48, 48, 0.26);
-        width: 134px;
+        padding: 0 10px;
         height: 36px;
         background: linear-gradient(113.96deg, #FFEEB8 6.41%, #FFFBED 49.79%, #8CFFF1 85.49%);
         border-radius: 7.28479px;

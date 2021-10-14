@@ -6,7 +6,7 @@
     "liquidity_page_hero_subtitle": "PancakeSwapにおけるHI\/BUSDのリクイディティ",
     "liquidity_page_title_1_content_1": "スケジュール＆インセンティブ",
     "liquidity_page_title_1_button_1": "チュートリアルを見る",
-    "liquidity_page_title_1": "<b>プログラム開始日：<\/b>？<br>\n<b>期間:<\/b>3ヶ月間<br>\n<b>リクイディティプール<\/b>: HI\/BUSD<br>\n<b>総報酬額1<\/b>,000,000 HI<br>\n<b>DEX：<\/b>PancakeSwap<br>\n<b>プラットフォーム<\/b>Binanceスマートチェーン<br><\/br><\/br><\/br><\/br><\/br>",
+    "liquidity_page_title_1": "<b>プログラム開始日：<\/b>10月15日<br>\n<b>期間:<\/b>3ヶ月間<br>\n<b>リクイディティプール<\/b>: HI\/BUSD<br>\n<b>総報酬額1<\/b>,000,000 HI<br>\n<b>DEX：<\/b>PancakeSwap<br>\n<b>プラットフォーム<\/b>Binanceスマートチェーン<br><\/br><\/br><\/br><\/br><\/br>",
     "liquidity_Page__title_2": "HI\/BUSD",
     "liquidity_Page_title_2_content_3": "プールサイズ",
     "liquidity_Page_title_2_content_4": "517.74 BUSD \/ <br>\n 4351.05 HI",
@@ -32,7 +32,7 @@
     "liquidity_page_title_4_button_1": "デポジット",
     "liquidity_page_title_4_content_3": "あなたのデポジット",
     "liquidity_page_title_4_content_4": "発生した報酬",
-    "liquidity_page_title_4_content_5": "バランス - 0 CAKE HI-BUSD",
+    "liquidity_page_title_4_content_5": "バランス",
     "liquidity_page_title_4_content_6": "あなたの推定報酬額",
     "liquidity_Page__title_4_content_8": "HIを獲得",
     "liquidity_Page__title_4_content_9": "引き出せる報酬",
@@ -62,7 +62,6 @@
     "liquidity_Page_title_4_content_7": "プログラム期間",
     "liquidity_Page_title_4_content_8": "預け入れ残高",
     "liquidity_Page_header_button_1": "PancakeSwapに流動性を追加する",
-    "liquidity_page_title_4_content_8": "ボーナスプール合計",
     "liquidity_page_title_4_content_9": "総預金",
     "liquidity_page_button_5": "MetaMaskに接続（切断）"
 }

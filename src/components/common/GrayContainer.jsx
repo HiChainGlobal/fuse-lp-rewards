@@ -58,7 +58,7 @@ const GrayContainer = ({ title, end, showWithdrawBtn = false, handleWithdraw, mo
         {
           showWithdrawBtn && (
             <button onClick={handleWithdraw} className='withdraw_stake'>
-             {t('liquidity_Page__title_4_content_8')}  {getRewardTokenName(networkId)}
+             {t('liquidity_Page__title_4_content_8')}
             </button>
           )
         }

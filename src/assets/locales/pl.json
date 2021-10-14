@@ -6,7 +6,7 @@
     "liquidity_page_hero_subtitle": "Płynność HI\/BUSD na PancakeSwap",
     "liquidity_page_title_1_content_1": "HARMONOGRAM I NAGRODY",
     "liquidity_page_title_1_button_1": "OBEJRZYJ TUTORIAL",
-    "liquidity_page_title_1": "<b>Rozpoczęcie programu:<\/b>???<br>\n<b>Czas trwania:<\/b> 3 miesiące<br>\n<b>Liquidity Pool<\/b>: HI\/BUSD<br>\n<b>Całkowite nagrody:<\/b> 1 000 000 HI<br>\n<b>DEX:<\/b> PancakeSwap<br>\n<b>Platforma:<\/b> Binance Smart Chain<br><\/br><\/br><\/br><\/br><\/br>",
+    "liquidity_page_title_1": "<b>Rozpoczęcie programu:<\/b>paź 15<br>\n<b>Czas trwania:<\/b> 3 miesiące<br>\n<b>Liquidity Pool<\/b>: HI\/BUSD<br>\n<b>Całkowite nagrody:<\/b> 1 000 000 HI<br>\n<b>DEX:<\/b> PancakeSwap<br>\n<b>Platforma:<\/b> Binance Smart Chain<br><\/br><\/br><\/br><\/br><\/br>",
     "liquidity_Page__title_2": "HI\/BUSD",
     "liquidity_Page_title_2_content_3": "WIELKOŚĆ PULI",
     "liquidity_Page_title_2_content_4": "517,74 BUSD \/<br>\n4351,05 HI",
@@ -32,7 +32,7 @@
     "liquidity_page_title_4_button_1": "Depozyt",
     "liquidity_page_title_4_content_3": "TWOJE DEPOZYTY",
     "liquidity_page_title_4_content_4": "ZGROMADZONE NAGRODY",
-    "liquidity_page_title_4_content_5": "Saldo - 0 CAKE HI-BUSD",
+    "liquidity_page_title_4_content_5": "Saldo",
     "liquidity_page_title_4_content_6": "TWOJE SZACOWANE NAGRODY",
     "liquidity_Page__title_4_content_8": "Odbierz HI",
     "liquidity_Page__title_4_content_9": "NAGRODY DO WYPŁATY",
@@ -62,7 +62,6 @@
     "liquidity_Page_title_4_content_7": "CZAS TRWANIA PROGRAMU",
     "liquidity_Page_title_4_content_8": "Zdeponowane saldo",
     "liquidity_Page_header_button_1": "Dodaj płynność na PancakeSwap",
-    "liquidity_page_title_4_content_8": "SUMA BONUSÓW",
     "liquidity_page_title_4_content_9": "RAZEM WPŁATY",
     "liquidity_page_button_5": "Połączono z MetaMask (rozłącz)"
 }
